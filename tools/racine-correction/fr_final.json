@@ -1,0 +1,1860 @@
+[
+ {
+  "id": "CHICK-01",
+  "stmt": [
+   {
+    "t": "Calculer : {1} ; {2} ; {3} ; {4}",
+    "m": [
+     "\\sqrt[3]{27}",
+     "\\sqrt[4]{16}",
+     "\\sqrt[5]{32}",
+     "\\sqrt[3]{- 8}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1} car {2} ; {3} car {4} ; {5} car {6} ; {7} car {8}.",
+    "m": [
+     "\\sqrt[3]{27} = 3",
+     "3^{3} = 27",
+     "\\sqrt[4]{16} = 2",
+     "2^{4} = 16",
+     "\\sqrt[5]{32} = 2",
+     "2^{5} = 32",
+     "\\sqrt[3]{- 8} = - 2",
+     "( - 2)^{3} = - 8"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICK-02",
+  "stmt": [
+   {
+    "t": "Simplifier : {1}",
+    "m": [
+     "\\sqrt[3]{2} \\times \\sqrt[3]{4}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "x": "\\sqrt[3]{2} \\times \\sqrt[3]{4} = \\sqrt[3]{8} = 2"
+   }
+  ]
+ },
+ {
+  "id": "CHICK-03",
+  "stmt": [
+   {
+    "t": "Simplifier : {1}",
+    "m": [
+     "\\dfrac{\\sqrt[4]{48}}{\\sqrt[4]{3}}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "x": "\\dfrac{\\sqrt[4]{48}}{\\sqrt[4]{3}}=\\sqrt[4]{\\dfrac{48}{3}}=\\sqrt[4]{16}=\\mathbf{2}"
+   }
+  ]
+ },
+ {
+  "id": "CHICK-04",
+  "stmt": [
+   {
+    "t": "Simplifier : {1}",
+    "m": [
+     "\\sqrt[3]{24} - \\sqrt[3]{3}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1}, donc {2}",
+    "m": [
+     "\\sqrt[3]{24} = \\sqrt[3]{8 \\times 3} = 2\\sqrt[3]{3}",
+     "2\\sqrt[3]{3} - \\sqrt[3]{3} = \\sqrt[3]{3}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICK-05",
+  "stmt": [
+   {
+    "t": "Écrire plus simplement : {1}",
+    "m": [
+     "\\sqrt[6]{8}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "x": "\\sqrt[6]{8} = \\sqrt[6]{2^{3}} = 2^{3/6} = 2^{1/2} = \\sqrt{2}"
+   }
+  ]
+ },
+ {
+  "id": "CHICK-06",
+  "stmt": [
+   {
+    "t": "Comparer : {1} et {2}",
+    "m": [
+     "\\sqrt{2}",
+     "\\sqrt[3]{3}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On met au même indice 6 : {1} et {2}.",
+    "m": [
+     "\\sqrt{2} = \\sqrt[6]{8}",
+     "\\sqrt[3]{3} = \\sqrt[6]{9}"
+    ]
+   },
+   {
+    "t": "Comme {1} : {2}",
+    "m": [
+     "8 < 9",
+     "\\sqrt{2} < \\sqrt[3]{3}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICK-07",
+  "stmt": [
+   {
+    "t": "Comparer : {1} et {2}",
+    "m": [
+     "\\sqrt[3]{2}",
+     "\\sqrt[6]{5}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "Indice 6 : {1} et {2}.",
+    "m": [
+     "\\sqrt[3]{2} = \\sqrt[6]{4}",
+     "\\sqrt[6]{5}"
+    ]
+   },
+   {
+    "t": "Comme {1} : {2}",
+    "m": [
+     "4 < 5",
+     "\\sqrt[3]{2} < \\sqrt[6]{5}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICK-08",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} : {2}",
+    "m": [
+     "\\mathbb{R}",
+     "x^{3} - 1 = 0"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1}. Le second facteur a {2}, donc pas de solution. {3}",
+    "m": [
+     "x^{3} - 1 = (x - 1)(x^{2} + x + 1) = 0",
+     "\\Delta = 1 - 4 < 0",
+     "S = \\{ 1\\}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICK-09",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} : {2}",
+    "m": [
+     "\\mathbb{R}",
+     "\\sqrt[3]{x + 1} = 2"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On élève au cube : {1}, donc {2}.",
+    "m": [
+     "x + 1 = 8",
+     "x = 7"
+    ]
+   },
+   {
+    "t": "Vérification : {1} ✓. {2}",
+    "m": [
+     "\\sqrt[3]{8} = 2",
+     "S = \\{ 7\\}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICK-10",
+  "stmt": [
+   {
+    "t": "Calculer : {1}",
+    "m": [
+     "\\displaystyle\\lim_{x\\to0}\\dfrac{\\sqrt[3]{x+8}-2}{x}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}, forme indéterminée.",
+    "m": [
+     "x = 0",
+     "\\dfrac{2 - 2}{0} = \\dfrac{0}{0}"
+    ]
+   },
+   {
+    "t": "On pose {1} et {2}, puis on multiplie par {3} :",
+    "m": [
+     "a = \\sqrt[3]{x + 8}",
+     "b = 2",
+     "a^{2} + 2a + 4"
+    ]
+   },
+   {
+    "x": "\\dfrac{(x + 8) - 8}{x\\left( \\sqrt[3]{(x + 8)^{2}} + 2\\sqrt[3]{x + 8} + 4 \\right)} = \\dfrac{1}{\\sqrt[3]{(x + 8)^{2}} + 2\\sqrt[3]{x + 8} + 4}"
+   },
+   {
+    "x": "\\lim_{x \\to 0} = \\dfrac{1}{4 + 4 + 4} = \\dfrac{1}{12}"
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-01",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to0}\\dfrac{\\sqrt[3]{x+27}-3}{x}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}, {4} et on multiplie par {5} :",
+    "m": [
+     "x = 0",
+     "\\dfrac{3 - 3}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{x + 27}",
+     "b = 3",
+     "a^{2} + 3a + 9"
+    ]
+   },
+   {
+    "x": "\\dfrac{(x + 27) - 27}{x\\left( \\sqrt[3]{(x + 27)^{2}} + 3\\sqrt[3]{x + 27} + 9 \\right)} = \\dfrac{1}{\\sqrt[3]{(x + 27)^{2}} + 3\\sqrt[3]{x + 27} + 9}"
+   },
+   {
+    "x": "\\lim_{x \\to 0} = \\dfrac{1}{9 + 9 + 9} = \\dfrac{1}{27}"
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-02",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to1}\\dfrac{\\sqrt[3]{x+7}-2}{x-1}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}, {4} et on multiplie par {5} :",
+    "m": [
+     "x = 1",
+     "\\dfrac{2 - 2}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{x + 7}",
+     "b = 2",
+     "a^{2} + 2a + 4"
+    ]
+   },
+   {
+    "x": "\\dfrac{(x+7)-8}{(x-1)(\\dots)}=\\dfrac{x-1}{(x-1)(\\dots)}=\\dfrac{1}{\\sqrt[3]{(x+7)^2}+2\\sqrt[3]{x+7}+4}"
+   },
+   {
+    "x": "\\lim_{x \\to 1} = \\dfrac{1}{4 + 4 + 4} = \\dfrac{1}{12}"
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-03",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to-1}\\dfrac{\\sqrt[3]{x}+1}{x+1}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}. Alors {4} :",
+    "m": [
+     "x = - 1",
+     "\\dfrac{- 1 + 1}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{x}",
+     "x + 1 = a^{3} + 1 = (a + 1)(a^{2} - a + 1)"
+    ]
+   },
+   {
+    "x": "\\dfrac{a + 1}{(a + 1)(a^{2} - a + 1)} = \\dfrac{1}{\\sqrt[3]{x^{2}} - \\sqrt[3]{x} + 1}"
+   },
+   {
+    "x": "\\lim_{x \\to -1} = \\dfrac{1}{1 + 1 + 1} = \\dfrac{1}{3}"
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-04",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{\\sqrt[3]{8x^3+1}}{x}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "On factorise {1} sous la racine :",
+    "m": [
+     "x^{3}"
+    ]
+   },
+   {
+    "x": "\\dfrac{\\sqrt[3]{x^3\\left(8+\\dfrac1{x^3}\\right)}}{x}=\\dfrac{x\\sqrt[3]{8+\\dfrac1{x^3}}}{x}=\\sqrt[3]{8+\\tfrac1{x^3}}\\to\\sqrt[3]{8}=\\mathbf{2}"
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-05",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to+\\infty}\\sqrt[3]{x^3+1}-x"
+   }
+  ],
+  "sol": [
+   {
+    "t": "Forme {1}. On pose {2}, {3} et on multiplie par {4} :",
+    "m": [
+     "\\infty - \\infty",
+     "a = \\sqrt[3]{x^{3} + 1}",
+     "b = x",
+     "a^{2} + ax + x^{2}"
+    ]
+   },
+   {
+    "x": "\\dfrac{(x^{3} + 1) - x^{3}}{a^{2} + ax + x^{2}} = \\dfrac{1}{\\sqrt[3]{(x^{3} + 1)^{2}} + x\\sqrt[3]{x^{3} + 1} + x^{2}}"
+   },
+   {
+    "t": "Le dénominateur tend vers {1}, donc {2}.",
+    "m": [
+     "+ \\infty",
+     "\\lim_{x \\to +\\infty} = 0"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-06",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} : {2}",
+    "m": [
+     "\\mathbb{R}",
+     "x^{3} + 27 = 0"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1}. Pour le second facteur, {2}, donc pas de solution. {3}",
+    "m": [
+     "x^{3} + 27 = (x + 3)(x^{2} - 3x + 9) = 0",
+     "\\Delta = 9 - 36 < 0",
+     "S = \\{ - 3\\}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-07",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} : {2}",
+    "m": [
+     "\\mathbb{R}",
+     "\\sqrt[3]{2x - 1} = 3"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On élève au cube : {1}, donc {2}, donc {3}.",
+    "m": [
+     "2x - 1 = 27",
+     "2x = 28",
+     "x = 14"
+    ]
+   },
+   {
+    "t": "Vérification : {1} ✓. {2}",
+    "m": [
+     "\\sqrt[3]{27} = 3",
+     "S = \\{ 14\\}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-08",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} : {2}",
+    "m": [
+     "\\mathbb{R}",
+     "\\sqrt[3]{x^{2} + x + 6} = 2"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On élève au cube : {1}, donc {2}, donc {3}.",
+    "m": [
+     "x^{2} + x + 6 = 8",
+     "x^{2} + x - 2 = 0",
+     "(x + 2)(x - 1) = 0"
+    ]
+   },
+   {
+    "t": "Vérification : {1} donne {2} ✓ et {3} donne {4} ✓. {5}",
+    "m": [
+     "x = 1",
+     "1 + 1 + 6 = 8",
+     "x = - 2",
+     "4 - 2 + 6 = 8",
+     "S = \\{ - 2,1\\}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-09",
+  "stmt": [
+   {
+    "t": "Simplifier {1} et {2}, puis ranger par ordre croissant {3}, {4} et {5}.",
+    "m": [
+     "a = \\sqrt[6]{4}",
+     "b = \\sqrt[4]{4}",
+     "a",
+     "b",
+     "c = \\sqrt[3]{3}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1} et {2}.",
+    "m": [
+     "a = \\sqrt[6]{4} = \\sqrt[6]{2^{2}} = 2^{1/3} = \\sqrt[3]{2}",
+     "b = \\sqrt[4]{4} = \\sqrt[4]{2^{2}} = \\sqrt{2}"
+    ]
+   },
+   {
+    "t": "On met au même indice 6 : {1}, {2}, {3}.",
+    "m": [
+     "a = \\sqrt[6]{4}",
+     "b = \\sqrt[6]{8}",
+     "c = \\sqrt[6]{9}"
+    ]
+   },
+   {
+    "t": "Comme {1} : {2}, soit {3}.",
+    "m": [
+     "4 < 8 < 9",
+     "a < b < c",
+     "\\sqrt[3]{2} < \\sqrt{2} < \\sqrt[3]{3}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "CHICKEN-10",
+  "stmt": [
+   {
+    "t": "Simplifier {1}, {2} et {3}, puis les ranger par ordre croissant.",
+    "m": [
+     "a = \\sqrt[4]{36}",
+     "b = \\sqrt[3]{2} \\times \\sqrt[3]{8}",
+     "c = \\sqrt[6]{125}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1} et {2}.",
+    "m": [
+     "a = \\sqrt[4]{36} = \\sqrt[4]{6^{2}} = \\sqrt{6}",
+     "b = \\sqrt[3]{2 \\times 8} = \\sqrt[3]{16}"
+    ]
+   },
+   {
+    "t": "On met au même indice 6 :",
+    "m": []
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "a = \\sqrt{6} = \\sqrt[6]{6^{3}} = \\sqrt[6]{216}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "b = \\sqrt[3]{16} = \\sqrt[6]{16^{2}} = \\sqrt[6]{256}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "c = \\sqrt[6]{125}"
+    ]
+   },
+   {
+    "t": "Comme {1} : {2}.",
+    "m": [
+     "125 < 216 < 256",
+     "c < a < b"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-01",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to2}\\dfrac{\\sqrt[3]{3x+2}-2}{x-2}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}, {4} et on multiplie par {5} :",
+    "m": [
+     "x = 2",
+     "\\dfrac{2 - 2}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{3x + 2}",
+     "b = 2",
+     "a^{2} + 2a + 4"
+    ]
+   },
+   {
+    "x": "\\dfrac{(3x + 2) - 8}{(x - 2)(a^{2} + 2a + 4)} = \\dfrac{3}{a^{2} + 2a + 4} \\to \\dfrac{3}{12} = \\dfrac{1}{4}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-02",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to0}\\dfrac{\\sqrt[3]{1+2x}-\\sqrt[3]{1-x}}{x}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}, {4}. On a {5}, donc :",
+    "m": [
+     "x = 0",
+     "\\dfrac{0}{0}",
+     "a = \\sqrt[3]{1 + 2x}",
+     "b = \\sqrt[3]{1 - x}",
+     "a^{3} - b^{3} = 3x"
+    ]
+   },
+   {
+    "x": "\\dfrac{3x}{x(a^{2} + ab + b^{2})} = \\dfrac{3}{a^{2} + ab + b^{2}} \\to \\dfrac{3}{1 + 1 + 1} = 1"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-03",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to1}\\dfrac{\\sqrt[3]{x+7}-\\sqrt[3]{3x+5}}{x-1}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}, {4}. On a {5} :",
+    "m": [
+     "x = 1",
+     "\\dfrac{2 - 2}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{x + 7}",
+     "b = \\sqrt[3]{3x + 5}",
+     "a^{3} - b^{3} = (x + 7) - (3x + 5) = 2 - 2x = - 2(x - 1)"
+    ]
+   },
+   {
+    "x": "\\dfrac{- 2(x - 1)}{(x - 1)(a^{2} + ab + b^{2})} = \\dfrac{- 2}{a^{2} + ab + b^{2}} \\to \\dfrac{- 2}{4 + 4 + 4} = - \\dfrac{1}{6}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-04",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to+\\infty}\\sqrt[3]{x^3+2x^2}-x"
+   }
+  ],
+  "sol": [
+   {
+    "t": "Forme {1}. On pose {2}, {3} :",
+    "m": [
+     "\\infty - \\infty",
+     "a = \\sqrt[3]{x^{3} + 2x^{2}}",
+     "b = x"
+    ]
+   },
+   {
+    "x": "\\dfrac{2x^{2}}{a^{2} + ax + x^{2}}"
+   },
+   {
+    "t": "Comme {1}, on divise en haut et en bas par {2} :",
+    "m": [
+     "a = x\\left( 1 + \\dfrac{2}{x} \\right)^{1/3}",
+     "x^{2}"
+    ]
+   },
+   {
+    "x": "= \\dfrac{2}{\\left( 1 + \\dfrac{2}{x} \\right)^{2/3} + \\left( 1 + \\dfrac{2}{x} \\right)^{1/3} + 1} \\to \\dfrac{2}{3}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-05",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to-\\infty}\\sqrt[3]{x^3+x^2+1}-x"
+   }
+  ],
+  "sol": [
+   {
+    "t": "On pose {1}, {2} :",
+    "m": [
+     "a = \\sqrt[3]{x^{3} + x^{2} + 1}",
+     "b = x"
+    ]
+   },
+   {
+    "t": "{1} avec {2}",
+    "m": [
+     "\\dfrac{x^2+1}{a^2+ax+x^2}=\\dfrac{1+\\dfrac1{x^2}}{u^{2/3}+u^{1/3}+1}",
+     "u=1+\\tfrac1x+\\tfrac1{x^3}\\to1"
+    ]
+   },
+   {
+    "t": "C’est valable en {1} car {2} (indice impair, pas de valeur absolue).",
+    "m": [
+     "- \\infty",
+     "\\sqrt[3]{x^{3}} = x"
+    ]
+   },
+   {
+    "x": "\\lim_{x \\to -\\infty} = \\dfrac{1}{3}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-06",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to+\\infty}\\sqrt[3]{x^3+x^2}-\\sqrt[3]{x^3-x^2}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "Forme {1}. On pose {2}, {3}. On a {4} :",
+    "m": [
+     "\\infty - \\infty",
+     "a = \\sqrt[3]{x^{3} + x^{2}}",
+     "b = \\sqrt[3]{x^{3} - x^{2}}",
+     "a^{3} - b^{3} = 2x^{2}"
+    ]
+   },
+   {
+    "x": "\\dfrac{2x^{2}}{a^{2} + ab + b^{2}}"
+   },
+   {
+    "t": "On écrit {1} et {2} avec {3} et {4}, puis on divise par {5} :",
+    "m": [
+     "a = xu^{1/3}",
+     "b = xv^{1/3}",
+     "u = 1 + \\dfrac{1}{x}",
+     "v = 1 - \\dfrac{1}{x}",
+     "x^{2}"
+    ]
+   },
+   {
+    "x": "= \\dfrac{2}{u^{2/3} + (uv)^{1/3} + v^{2/3}} \\to \\dfrac{2}{1 + 1 + 1} = \\dfrac{2}{3}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-07",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to0}\\dfrac{\\sqrt[3]{1+x}-1}{\\sqrt[3]{1+2x}-1}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3} et {4} :",
+    "m": [
+     "x = 0",
+     "\\dfrac{0}{0}",
+     "a = \\sqrt[3]{1 + x}",
+     "c = \\sqrt[3]{1 + 2x}"
+    ]
+   },
+   {
+    "t": "{1} et {2}",
+    "m": [
+     "a-1=\\dfrac{x}{a^{2}+a+1}",
+     "c-1=\\dfrac{2x}{c^{2}+c+1}"
+    ]
+   },
+   {
+    "x": "\\dfrac{a - 1}{c - 1} = \\dfrac{c^{2} + c + 1}{2(a^{2} + a + 1)} \\to \\dfrac{3}{2 \\times 3} = \\dfrac{1}{2}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-08",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to-8}\\dfrac{\\sqrt[3]{x}+2}{x+8}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3}, donc {4} :",
+    "m": [
+     "x = - 8",
+     "\\dfrac{- 2 + 2}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{x}",
+     "x + 8 = a^{3} + 8 = (a + 2)(a^{2} - 2a + 4)"
+    ]
+   },
+   {
+    "x": "\\dfrac{a + 2}{(a + 2)(a^{2} - 2a + 4)} = \\dfrac{1}{a^{2} - 2a + 4} \\to \\dfrac{1}{4 + 4 + 4} = \\dfrac{1}{12}"
+   },
+   {
+    "t": "(avec {1}, donc {2} et {3}).",
+    "m": [
+     "a \\to - 2",
+     "a^{2} = 4",
+     "- 2a = 4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-09",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} :",
+    "m": [
+     "\\mathbb{R}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "E_{1}:\\sqrt[3]{x^{2} + 2x - 1} = \\sqrt[3]{2x + 3}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "E_{2}:\\sqrt{x + 2} = x"
+    ]
+   },
+   {
+    "t": "• {1} (poser {2})",
+    "m": [
+     "E_{3}:\\sqrt[3]{x^{2}} - 3\\sqrt[3]{x} + 2 = 0",
+     "t = \\sqrt[3]{x}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1} : Les deux côtés existent toujours (indice 3). On élève au cube :",
+    "m": [
+     "E_{1}"
+    ]
+   },
+   {
+    "t": "{1}, donc {2}.",
+    "m": [
+     "x^{2} + 2x - 1 = 2x + 3",
+     "x^{2} = 4"
+    ]
+   },
+   {
+    "x": "S = \\{ - 2,2\\}"
+   },
+   {
+    "t": "{1} :",
+    "m": [
+     "E_{2}"
+    ]
+   },
+   {
+    "t": "• Conditions : {1} et {2} (une racine carrée est positive).",
+    "m": [
+     "x + 2 \\geq 0",
+     "x \\geq 0"
+    ]
+   },
+   {
+    "t": "• On élève au carré : {1}, donc {2}, donc {3}.",
+    "m": [
+     "x + 2 = x^{2}",
+     "x^{2} - x - 2 = 0",
+     "(x - 2)(x + 1) = 0"
+    ]
+   },
+   {
+    "t": "• {1} convient : {2} ✓.",
+    "m": [
+     "x = 2",
+     "\\sqrt{4} = 2"
+    ]
+   },
+   {
+    "t": "• {1} est rejeté : {2}.",
+    "m": [
+     "x = - 1",
+     "\\sqrt{1} = 1 \\neq - 1"
+    ]
+   },
+   {
+    "x": "S = \\{ 2\\}"
+   },
+   {
+    "t": "{1} : On pose {2}, donc {3}.",
+    "m": [
+     "E_{3}",
+     "t = \\sqrt[3]{x}",
+     "\\sqrt[3]{x^{2}} = t^{2}"
+    ]
+   },
+   {
+    "t": "{1}, donc {2}, donc {3} ou {4}.",
+    "m": [
+     "t^{2} - 3t + 2 = 0",
+     "(t - 1)(t - 2) = 0",
+     "t = 1",
+     "t = 2"
+    ]
+   },
+   {
+    "t": "Alors {1} : {2} ou {3}.",
+    "m": [
+     "x = t^{3}",
+     "x = 1",
+     "x = 8"
+    ]
+   },
+   {
+    "t": "Vérification : {1} donne {2} ✓.",
+    "m": [
+     "x = 8",
+     "4 - 6 + 2 = 0"
+    ]
+   },
+   {
+    "x": "S = \\{ 1,8\\}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-10",
+  "stmt": [
+   {
+    "t": "Simplifier {1}.",
+    "m": [
+     "A = \\sqrt[3]{54} + \\sqrt[3]{250} - \\sqrt[3]{16}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1}, {2}, {3}.",
+    "m": [
+     "\\sqrt[3]{54} = \\sqrt[3]{27 \\times 2} = 3\\sqrt[3]{2}",
+     "\\sqrt[3]{250} = \\sqrt[3]{125 \\times 2} = 5\\sqrt[3]{2}",
+     "\\sqrt[3]{16} = \\sqrt[3]{8 \\times 2} = 2\\sqrt[3]{2}"
+    ]
+   },
+   {
+    "x": "A = (3 + 5 - 2)\\sqrt[3]{2} = 6\\sqrt[3]{2}"
+   }
+  ]
+ },
+ {
+  "id": "RAVEN-11",
+  "stmt": [
+   {
+    "t": "Simplifier {1}, {2} et {3}, puis les ranger par ordre croissant.",
+    "m": [
+     "a = \\sqrt{3} \\times \\sqrt[4]{3}",
+     "b = \\sqrt[6]{81}",
+     "c = \\sqrt[3]{3} \\times \\sqrt[4]{3}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On passe en puissances de {1} :",
+    "m": [
+     "3"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "a = 3^{1/2} \\times 3^{1/4} = 3^{3/4}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "b = \\sqrt[6]{3^{4}} = 3^{2/3}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "c = 3^{1/3} \\times 3^{1/4} = 3^{7/12}"
+    ]
+   },
+   {
+    "t": "Au même dénominateur {1} : {2}, {3}, {4}.",
+    "m": [
+     "12",
+     "a = 3^{9/12}",
+     "b = 3^{8/12}",
+     "c = 3^{7/12}"
+    ]
+   },
+   {
+    "t": "Comme {1}, la puissance croît avec l’exposant : {2}.",
+    "m": [
+     "3 > 1",
+     "7 < 8 < 9"
+    ]
+   },
+   {
+    "x": "c < b < a"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-01",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to0}\\dfrac{\\sqrt[3]{1+x}+\\sqrt[3]{1-x}-2}{x^2}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3} et {4}. On écrit",
+    "m": [
+     "0",
+     "\\dfrac{2 - 2}{0} = \\dfrac{0}{0}",
+     "a = \\sqrt[3]{1 + x}",
+     "b = \\sqrt[3]{1 - x}"
+    ]
+   },
+   {
+    "t": "{1}, {2}, {3}",
+    "m": [
+     "a+b-2=(a-1)+(b-1)",
+     "a-1=\\dfrac{x}{a^{2}+a+1}",
+     "b-1=\\dfrac{-x}{b^{2}+b+1}"
+    ]
+   },
+   {
+    "t": "Donc",
+    "m": []
+   },
+   {
+    "x": "a + b - 2 = x \\cdot \\dfrac{(b^{2} + b) - (a^{2} + a)}{(a^{2} + a + 1)(b^{2} + b + 1)} = x \\cdot \\dfrac{(b - a)(a + b + 1)}{(a^{2} + a + 1)(b^{2} + b + 1)}"
+   },
+   {
+    "t": "Comme {1}, on a {2}. D’où",
+    "m": [
+     "a^{3} - b^{3} = 2x",
+     "b-a=\\dfrac{-2x}{a^2+ab+b^2}"
+    ]
+   },
+   {
+    "x": "\\dfrac{a + b - 2}{x^{2}} = \\dfrac{- 2(a + b + 1)}{(a^{2} + a + 1)(b^{2} + b + 1)(a^{2} + ab + b^{2})} \\to \\dfrac{- 2 \\times 3}{3 \\times 3 \\times 3} = - \\dfrac{2}{9}"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-02",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to+\\infty}\\sqrt[3]{x^3+3x^2}-\\sqrt[3]{x^3+x^2}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "Forme {1}. On pose {2} et {3}. On a {4}. On écrit {5} et {6} avec {7} et {8} (valable en {9}) :",
+    "m": [
+     "\\infty - \\infty",
+     "a = \\sqrt[3]{x^{3} + 3x^{2}}",
+     "b = \\sqrt[3]{x^{3} + x^{2}}",
+     "a^{3} - b^{3} = 2x^{2}",
+     "a = xu^{1/3}",
+     "b = xv^{1/3}",
+     "u = 1 + \\dfrac{3}{x}",
+     "v = 1 + \\dfrac{1}{x}",
+     "+ \\infty"
+    ]
+   },
+   {
+    "x": "a - b = \\dfrac{2x^{2}}{a^{2} + ab + b^{2}} = \\dfrac{2}{u^{2/3} + (uv)^{1/3} + v^{2/3}} \\to \\dfrac{2}{3}"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-03",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to1}\\dfrac{\\sqrt[3]{x^2}-2\\sqrt[3]{x}+1}{(x-1)^2}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "On pose {1}, donc {2} quand {3}. Alors {4} :",
+    "m": [
+     "t = \\sqrt[3]{x}",
+     "t \\to 1",
+     "x \\to 1",
+     "x - 1 = t^{3} - 1 = (t - 1)(t^{2} + t + 1)"
+    ]
+   },
+   {
+    "x": "\\dfrac{t^{2} - 2t + 1}{(t^{3} - 1)^{2}} = \\dfrac{(t - 1)^{2}}{(t - 1)^{2}(t^{2} + t + 1)^{2}} = \\dfrac{1}{(t^{2} + t + 1)^{2}} \\to \\dfrac{1}{9}"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-04",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to+\\infty}x^2\\left(\\sqrt[3]{x^3+1}-x\\right)"
+   }
+  ],
+  "sol": [
+   {
+    "t": "Forme {1}. On pose {2}. On a {3}, donc",
+    "m": [
+     "\\infty \\times 0",
+     "a = \\sqrt[3]{x^{3} + 1}",
+     "a^{3} - x^{3} = 1"
+    ]
+   },
+   {
+    "x": "x^{2}(a - x) = \\dfrac{x^{2}}{a^{2} + ax + x^{2}} = \\dfrac{1}{\\left( 1 + \\dfrac{1}{x^{3}} \\right)^{2/3} + \\left( 1 + \\dfrac{1}{x^{3}} \\right)^{1/3} + 1} \\to \\dfrac{1}{3}"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-05",
+  "stmt": [
+   {
+    "x": "\\displaystyle\\lim_{x\\to0}\\dfrac{\\sqrt[3]{1+3x}-\\sqrt[3]{1-3x}}{\\sin x}"
+   }
+  ],
+  "sol": [
+   {
+    "t": "En {1} : {2}. On pose {3} et {4}. On a {5} :",
+    "m": [
+     "0",
+     "\\dfrac{0}{0}",
+     "a = \\sqrt[3]{1 + 3x}",
+     "b = \\sqrt[3]{1 - 3x}",
+     "a^{3} - b^{3} = 6x"
+    ]
+   },
+   {
+    "x": "\\dfrac{a - b}{\\sin x} = \\dfrac{6x}{(a^{2} + ab + b^{2})\\sin x} = \\dfrac{x}{\\sin x} \\cdot \\dfrac{6}{a^{2} + ab + b^{2}} \\to 1 \\times \\dfrac{6}{3} = 2"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-06",
+  "stmt": [
+   {
+    "t": "Soit {1}. Calculer {2}, puis résoudre dans {3} : {4}.",
+    "m": [
+     "f(x) = \\sqrt[3]{x + 7} - \\sqrt[3]{x - 1}",
+     "\\displaystyle\\lim_{x\\to+\\infty}f(x)",
+     "\\mathbb{R}",
+     "f(x) = 2"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On pose {1} et {2}. On a {3}.",
+    "m": [
+     "a = \\sqrt[3]{x + 7}",
+     "b = \\sqrt[3]{x - 1}",
+     "a^{3} - b^{3} = 8"
+    ]
+   },
+   {
+    "t": "**Limite :** {1} et le dénominateur tend vers {2}, donc {3}.",
+    "m": [
+     "f(x)=\\dfrac{8}{a^2+ab+b^2}",
+     "+ \\infty",
+     "\\lim_{x \\to +\\infty} = 0"
+    ]
+   },
+   {
+    "t": "**Équation :** {1} et {2} donnent {3}. Comme {4} :",
+    "m": [
+     "a - b = 2",
+     "(a - b)(a^{2} + ab + b^{2}) = 8",
+     "a^{2} + ab + b^{2} = 4",
+     "a = b + 2"
+    ]
+   },
+   {
+    "t": "{1} ou {2}",
+    "m": [
+     "(b+2)^{2}+(b+2)b+b^{2}=3b^{2}+6b+4=4\\Rightarrow 3b(b+2)=0\\Rightarrow b=0",
+     "b=-2"
+    ]
+   },
+   {
+    "t": "Donc {1} ou {2}.",
+    "m": [
+     "x - 1 = 0",
+     "x - 1 = - 8"
+    ]
+   },
+   {
+    "t": "Vérification : {1} donne {2} ✓ et {3} donne {4} ✓. {5}",
+    "m": [
+     "x = 1",
+     "2 - 0 = 2",
+     "x = - 7",
+     "0 - ( - 2) = 2",
+     "S = \\{ - 7,1\\}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-07",
+  "stmt": [
+   {
+    "t": "Résoudre dans {1} : {2}. Puis calculer {3}.",
+    "m": [
+     "\\mathbb{R}",
+     "\\sqrt[3]{x^{2}} - \\sqrt[3]{x} - 2 = 0",
+     "\\displaystyle\\lim_{x\\to8}\\dfrac{\\sqrt[3]{x^2}-\\sqrt[3]{x}-2}{x-8}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "**Équation :** on pose {1}, donc {2}, soit {3} ou {4}, donc {5} ou {6}. {7}",
+    "m": [
+     "t = \\sqrt[3]{x}",
+     "t^{2} - t - 2 = (t - 2)(t + 1) = 0",
+     "t = 2",
+     "t = - 1",
+     "x = 8",
+     "x = - 1",
+     "S = \\{ - 1,8\\}"
+    ]
+   },
+   {
+    "t": "**Limite :** avec {1} et {2} :",
+    "m": [
+     "t = \\sqrt[3]{x} \\to 2",
+     "x - 8 = t^{3} - 8 = (t - 2)(t^{2} + 2t + 4)"
+    ]
+   },
+   {
+    "x": "\\dfrac{(t - 2)(t + 1)}{(t - 2)(t^{2} + 2t + 4)} = \\dfrac{t + 1}{t^{2} + 2t + 4} \\to \\dfrac{3}{12} = \\dfrac{1}{4}"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-08",
+  "stmt": [
+   {
+    "t": "Soit {1}.",
+    "m": [
+     "h(x) = \\sqrt[3]{1 + x} + \\sqrt[3]{1 - x}"
+    ]
+   },
+   {
+    "t": "a) Calculer {1}.",
+    "m": [
+     "\\displaystyle\\lim_{x\\to+\\infty}h(x)"
+    ]
+   },
+   {
+    "t": "b) Résoudre dans {1} : {2}.",
+    "m": [
+     "\\mathbb{R}",
+     "h(x) = 1"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "On pose {1} et {2}.",
+    "m": [
+     "a = \\sqrt[3]{1 + x}",
+     "b = \\sqrt[3]{1 - x}"
+    ]
+   },
+   {
+    "t": "**Limite :** en {1}, {2}. Avec {3}, {4}, donc {5}.",
+    "m": [
+     "+ \\infty",
+     "h(x) = a - \\sqrt[3]{x - 1}",
+     "c = \\sqrt[3]{x - 1}",
+     "a^{3} - c^{3} = 2",
+     "h(x)=\\dfrac2{a^2+ac+c^2}\\to\\mathbf0"
+    ]
+   },
+   {
+    "t": "**Équation :** {1} et {2}. Comme {3} :",
+    "m": [
+     "a + b = 1",
+     "a^{3} + b^{3} = 2",
+     "a^{3} + b^{3} = (a + b)^{3} - 3ab(a + b)"
+    ]
+   },
+   {
+    "x": "2 = 1 - 3ab \\Rightarrow ab = - \\dfrac{1}{3} \\Rightarrow \\sqrt[3]{1 - x^{2}} = - \\dfrac{1}{3} \\Rightarrow 1 - x^{2} = - \\dfrac{1}{27}"
+   },
+   {
+    "t": "Donc {1}.",
+    "m": [
+     "x^2=\\dfrac{28}{27}"
+    ]
+   },
+   {
+    "t": "Vérification : {1} vérifie {2} (car {3}), soit {4}, donc {5} ✓. {6}",
+    "m": [
+     "s = a + b",
+     "s^{3} + s - 2 = 0",
+     "ab = - \\dfrac{1}{3}",
+     "(s - 1)(s^{2} + s + 2) = 0",
+     "s = 1",
+     "\\mathbf{S=\\left\\{-\\tfrac{2\\sqrt{21}}{9},\\ \\tfrac{2\\sqrt{21}}{9}\\right\\}}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-09",
+  "stmt": [
+   {
+    "t": "Soit {1}.",
+    "m": [
+     "f(x) = \\sqrt[3]{x} + x - 1"
+    ]
+   },
+   {
+    "t": "a) Calculer {1} et {2}.",
+    "m": [
+     "\\displaystyle\\lim_{x\\to-\\infty}f(x)",
+     "\\displaystyle\\lim_{x\\to+\\infty}f(x)"
+    ]
+   },
+   {
+    "t": "b) Montrer que l’équation {1} admet une solution unique {2}, puis que {3}.",
+    "m": [
+     "f(x) = 0",
+     "\\alpha",
+     "\\alpha\\in\\left]\\tfrac18,\\tfrac12\\right["
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "1) {1} et {2} (somme de deux fonctions de même limite).",
+    "m": [
+     "\\lim_{- \\infty}f = - \\infty",
+     "\\lim_{+ \\infty}f = + \\infty"
+    ]
+   },
+   {
+    "t": "2) {1} est continue sur {2} et strictement croissante (somme de deux fonctions strictement croissantes). Elle réalise donc une bijection de {3} sur {4}, et {5} a un unique antécédent {6}.",
+    "m": [
+     "f",
+     "\\mathbb{R}",
+     "\\mathbb{R}",
+     "\\mathbb{R}",
+     "0",
+     "\\alpha"
+    ]
+   },
+   {
+    "t": "On a {1} et {2} (car {3}). Par le TVI :",
+    "m": [
+     "f\\left( \\dfrac{1}{8} \\right) = \\dfrac{1}{2} + \\dfrac{1}{8} - 1 = - \\dfrac{3}{8} < 0",
+     "f\\left(\\dfrac12\\right)=\\sqrt[3]{\\tfrac12}-\\tfrac12>0",
+     "\\sqrt[3]{1/2}>\\dfrac12\\iff\\dfrac12>\\dfrac18"
+    ]
+   },
+   {
+    "x": "\\mathbf{\\alpha\\in\\left]\\tfrac18,\\tfrac12\\right[}"
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-10",
+  "stmt": [
+   {
+    "t": "Problème. Soit {1}.",
+    "m": [
+     "f(x) = \\sqrt[3]{x^{3} + 3x^{2}}"
+    ]
+   },
+   {
+    "t": "a) Montrer que la droite {1} est asymptote à {2} en {3} et en {4}.",
+    "m": [
+     "(D):y = x + 1",
+     "(C_{f})",
+     "+ \\infty",
+     "- \\infty"
+    ]
+   },
+   {
+    "t": "b) Résoudre {1}, puis étudier la position de {2} par rapport à {3}.",
+    "m": [
+     "f(x) = x + 1",
+     "(C_{f})",
+     "(D)"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "1) On pose {1} et {2}. On a {3}, donc {4} :",
+    "m": [
+     "a = f(x)",
+     "b = x + 1",
+     "b^{3} = x^{3} + 3x^{2} + 3x + 1",
+     "a^{3} - b^{3} = - 3x - 1"
+    ]
+   },
+   {
+    "x": "f(x) - (x + 1) = \\dfrac{- 3x - 1}{a^{2} + ab + b^{2}}"
+   },
+   {
+    "t": "Comme {1} et {2} en {3}, le dénominateur est équivalent à {4}. Donc {5} en {6}. {7} est asymptote.",
+    "m": [
+     "a \\sim x",
+     "b \\sim x",
+     "\\pm \\infty",
+     "3x^{2}",
+     "f(x)-(x+1)\\sim\\dfrac{-3x}{3x^2}=-\\dfrac1x\\to0",
+     "\\pm \\infty",
+     "(D):y = x + 1"
+    ]
+   },
+   {
+    "t": "2) {1}. Vérification : {2} ✓.",
+    "m": [
+     "f(x)=x+1\\iff a^3=b^3\\iff-3x-1=0\\iff x=-\\dfrac13",
+     "f\\left( - \\dfrac{1}{3} \\right) = \\sqrt[3]{\\dfrac{8}{27}} = \\dfrac{2}{3} = - \\dfrac{1}{3} + 1"
+    ]
+   },
+   {
+    "t": "**Position :** {1} (c’est nul seulement si {2}, impossible). Le signe de {3} est donc celui de {4} :",
+    "m": [
+     "a^{2} + ab + b^{2} > 0",
+     "a = b = 0",
+     "f(x) - (x + 1)",
+     "- 3x - 1"
+    ]
+   },
+   {
+    "t": "• si {1} : {2} est au-dessus de {3} ;",
+    "m": [
+     "x < - \\dfrac{1}{3}",
+     "(C_{f})",
+     "(D)"
+    ]
+   },
+   {
+    "t": "• si {1} : {2} est en dessous de {3} ;",
+    "m": [
+     "x > - \\dfrac{1}{3}",
+     "(C_{f})",
+     "(D)"
+    ]
+   },
+   {
+    "t": "• en {1} : ils se coupent.",
+    "m": [
+     "x = - \\dfrac{1}{3}"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-11",
+  "stmt": [
+   {
+    "t": "A. Pour {1}, on pose {2} ({3}). Déterminer tous les couples {4} tels que {5} admette en {6} une limite finie égale à {7}.",
+    "m": [
+     "a,b\\in\\mathbb{R}",
+     "f(x)=\\dfrac{\\sqrt[3]{x+a}-b}{x-1}",
+     "x \\neq 1",
+     "(a,b)",
+     "f",
+     "1",
+     "\\dfrac1{12}"
+    ]
+   },
+   {
+    "t": "B. Pour {1}, on pose {2}. Montrer que {3} est asymptote à {4} en {5}, puis discuter selon {6} la position de {7} par rapport à cette asymptote au voisinage de {8}.",
+    "m": [
+     "m\\in\\mathbb{R}",
+     "f_{m}(x) = \\sqrt[3]{x^{3} + mx^{2} + 1}",
+     "y=x+\\dfrac m3",
+     "(C_{m})",
+     "+ \\infty",
+     "m",
+     "(C_{m})",
+     "+ \\infty"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "A. Pour que la limite soit finie, il faut que le numérateur s’annule en {1} : {2}, donc {3}.",
+    "m": [
+     "1",
+     "\\sqrt[3]{1 + a} = b",
+     "a = b^{3} - 1"
+    ]
+   },
+   {
+    "t": "Cas {1} : {2} et {3}, rejeté.",
+    "m": [
+     "b = 0",
+     "a = - 1",
+     "f(x)=\\dfrac{1}{(x-1)^{2/3}}\\to+\\infty"
+    ]
+   },
+   {
+    "t": "Cas {1} : on pose {2} :",
+    "m": [
+     "b \\neq 0",
+     "A = \\sqrt[3]{x + a}"
+    ]
+   },
+   {
+    "x": "f(x) = \\dfrac{(x + a) - b^{3}}{(x - 1)(A^{2} + Ab + b^{2})} = \\dfrac{x - 1}{(x - 1)(A^{2} + Ab + b^{2})} \\to \\dfrac{1}{3b^{2}}"
+   },
+   {
+    "t": "On veut {1}, donc {2}, donc {3}.",
+    "m": [
+     "\\dfrac1{3b^2}=\\dfrac1{12}",
+     "b^{2} = 4",
+     "b = \\pm 2"
+    ]
+   },
+   {
+    "t": "{1} ou {2}",
+    "m": [
+     "(a,b)=(7,2)",
+     "(a,b)=(-9,-2)"
+    ]
+   },
+   {
+    "t": "Vérification de {1} : {2} ✓.",
+    "m": [
+     "( - 9, - 2)",
+     "\\sqrt[3]{1 - 9} = - 2"
+    ]
+   },
+   {
+    "t": "B. On pose {1} et {2}. On a {3}, donc",
+    "m": [
+     "a = f_{m}(x)",
+     "b = x + \\dfrac{m}{3}",
+     "b^{3} = x^{3} + mx^{2} + \\dfrac{m^{2}}{3}x + \\dfrac{m^{3}}{27}"
+    ]
+   },
+   {
+    "x": "a^{3} - b^{3} = 1 - \\dfrac{m^{2}}{3}x - \\dfrac{m^{3}}{27}"
+   },
+   {
+    "x": "f_{m}(x) - b = \\dfrac{1 - \\dfrac{m^{2}}{3}x - \\dfrac{m^{3}}{27}}{a^{2} + ab + b^{2}}"
+   },
+   {
+    "t": "Le dénominateur est équivalent à {1} et le numérateur est au plus de degré {2}, donc la différence tend vers {3} : {4} est asymptote.",
+    "m": [
+     "3x^{2}",
+     "1",
+     "0",
+     "y = x + \\dfrac{m}{3}"
+    ]
+   },
+   {
+    "t": "**Discussion en {1} :**",
+    "m": [
+     "+ \\infty"
+    ]
+   },
+   {
+    "t": "• si {1} : le numérateur est équivalent à {2}, donc {3} est en dessous de l’asymptote ;",
+    "m": [
+     "m \\neq 0",
+     "- \\dfrac{m^{2}}{3}x < 0",
+     "(C_{m})"
+    ]
+   },
+   {
+    "t": "• si {1} : le numérateur vaut {2}, donc {3} est au-dessus de {4}.",
+    "m": [
+     "m = 0",
+     "1 > 0",
+     "(C_{0})",
+     "y = x"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "EAGLE-12",
+  "stmt": [
+   {
+    "t": "Branche parabolique. Soit {1}.",
+    "m": [
+     "f(x) = x + \\sqrt[3]{x^{2}}"
+    ]
+   },
+   {
+    "t": "a) Étudier la branche infinie de {1} en {2} et en {3}.",
+    "m": [
+     "(C_{f})",
+     "+ \\infty",
+     "- \\infty"
+    ]
+   },
+   {
+    "t": "b) Étudier la dérivabilité de {1} en {2} et interpréter graphiquement.",
+    "m": [
+     "f",
+     "0"
+    ]
+   },
+   {
+    "t": "c) Montrer que {1} admet un maximum local, à déterminer.",
+    "m": [
+     "f"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "1) Pour {1} :",
+    "m": [
+     "x \\neq 0"
+    ]
+   },
+   {
+    "t": "{1} et {2}",
+    "m": [
+     "\\dfrac{f(x)}{x}=1+\\dfrac{1}{\\sqrt[3]{x}}\\to1",
+     "f(x)-x=\\sqrt[3]{x^{2}}\\to+\\infty"
+    ]
+   },
+   {
+    "t": "en {1} et en {2} (car {3}). Donc {4} admet des **branches paraboliques de direction la droite {5}** en {6} et en {7}. Il n’y a pas d’asymptote.",
+    "m": [
+     "+ \\infty",
+     "- \\infty",
+     "\\sqrt[3]{x^{2}} \\geq 0",
+     "(C_{f})",
+     "y = x",
+     "+ \\infty",
+     "- \\infty"
+    ]
+   },
+   {
+    "t": "2) {1}, qui tend vers {2} quand {3} et vers {4} quand {5}. {6} n’est pas dérivable en {7}. {8} admet en {9} deux demi-tangentes verticales (point de rebroussement) : une vers le haut à droite, une vers le haut à gauche, car {10} près de {11}.",
+    "m": [
+     "\\dfrac{f(x)-f(0)}{x}=1+\\dfrac1{\\sqrt[3]{x}}",
+     "+ \\infty",
+     "x \\to 0^{+}",
+     "- \\infty",
+     "x \\to 0^{-}",
+     "f",
+     "0",
+     "(C_{f})",
+     "O",
+     "f(x) \\geq 0",
+     "0"
+    ]
+   },
+   {
+    "t": "3) Pour {1} : {2}.",
+    "m": [
+     "x \\neq 0",
+     "f'(x)=1+\\dfrac{2}{3\\sqrt[3]{x}}=\\dfrac{3\\sqrt[3]{x}+2}{3\\sqrt[3]{x}}"
+    ]
+   },
+   {
+    "t": "{1}.",
+    "m": [
+     "f'(x)=0\\iff\\sqrt[3]{x}=-\\dfrac23\\iff x=-\\dfrac8{27}"
+    ]
+   },
+   {
+    "t": "• sur {1} : {2} ;",
+    "m": [
+     "\\left]-\\infty,-\\dfrac8{27}\\right[",
+     "f' > 0"
+    ]
+   },
+   {
+    "t": "• sur {1} : {2} ;",
+    "m": [
+     "\\left]-\\dfrac8{27},0\\right[",
+     "f' < 0"
+    ]
+   },
+   {
+    "t": "• sur {1} : {2}.",
+    "m": [
+     "] 0, + \\infty[",
+     "f' > 0"
+    ]
+   },
+   {
+    "t": "{1} admet un maximum local en {2} :",
+    "m": [
+     "f",
+     "x = - \\dfrac{8}{27}"
+    ]
+   },
+   {
+    "x": "f\\left(-\\tfrac8{27}\\right)=-\\tfrac8{27}+\\sqrt[3]{\\tfrac{64}{729}}=-\\tfrac8{27}+\\tfrac49=\\mathbf{\\tfrac4{27}}"
+   },
+   {
+    "t": "et un minimum local en {1}, où {2}.",
+    "m": [
+     "0",
+     "f(0) = 0"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "PHOENIX-01",
+  "stmt": [
+   {
+    "t": "Calculer : {1}",
+    "m": [
+     "L_{A} = \\lim_{x \\to 0}\\dfrac{\\sqrt{1 + 2x} - 2\\sqrt[3]{1 + 3x} + \\sqrt[4]{1 + 4x}}{x^{3}}"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "Pour {1}, on pose {2} et on développe :",
+    "m": [
+     "a \\in \\{ 2,3,4\\}",
+     "(1 + ax)^{1/a}"
+    ]
+   },
+   {
+    "x": "(1+ax)^{1/a}=1+x+\\dfrac{1-a}{2}x^2+\\dfrac{(1-a)(1-2a)}{6}x^3+\\dots"
+   },
+   {
+    "t": "<TABLE> [[\"\", [], []], [null, []], [[{\"t\": \"AlignDefault\"}",
+    "m": []
+   },
+   {
+    "t": "La combinaison {1} donne :",
+    "m": [
+     "1 \\cdot (a = 2) - 2 \\cdot (a = 3) + 1 \\cdot (a = 4)"
+    ]
+   },
+   {
+    "t": "• constante : {1}",
+    "m": [
+     "1 - 2 + 1 = 0"
+    ]
+   },
+   {
+    "t": "• {1} : {2}",
+    "m": [
+     "x",
+     "1 - 2 + 1 = 0"
+    ]
+   },
+   {
+    "t": "• {1} : {2}",
+    "m": [
+     "x^{2}",
+     "-\\tfrac12+2-\\tfrac32=0"
+    ]
+   },
+   {
+    "t": "• {1} : {2}",
+    "m": [
+     "x^{3}",
+     "\\tfrac12-\\tfrac{10}{3}+\\tfrac72=\\tfrac23"
+    ]
+   },
+   {
+    "t": "Le numérateur vaut donc {1}, et",
+    "m": [
+     "\\tfrac23x^3+o(x^3)"
+    ]
+   },
+   {
+    "x": "\\boxed{L_A=\\tfrac23}"
+   }
+  ]
+ },
+ {
+  "id": "PHOENIX-02",
+  "stmt": [
+   {
+    "t": "Calculer : {1}",
+    "m": [
+     "L_{B} = \\lim_{x \\to + \\infty}\\left[ x^{2}\\left( \\sqrt[3]{x^{3} + 3x^{2} + 1} - \\sqrt{x^{2} + 2x + 3} \\right) + 2x \\right]"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "Racine cubique : {1} avec {2}.",
+    "m": [
+     "x(1 + u)^{1/3}",
+     "u = \\dfrac{3}{x} + \\dfrac{1}{x^{3}}"
+    ]
+   },
+   {
+    "x": "(1 + u)^{1/3} = 1 + \\dfrac{u}{3} - \\dfrac{u^{2}}{9} + \\dfrac{5u^{3}}{81}"
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "\\dfrac{u}{3} = \\dfrac{1}{x} + \\dfrac{1}{3x^{3}}"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "-\\dfrac{u^2}{9}=-\\dfrac1{x^2}-\\dots"
+    ]
+   },
+   {
+    "t": "• {1}",
+    "m": [
+     "\\dfrac{5u^3}{81}=\\dfrac{5}{3x^3}+\\dots"
+    ]
+   },
+   {
+    "t": "Donc {1} et",
+    "m": [
+     "(1+u)^{1/3}=1+\\dfrac1x-\\dfrac1{x^2}+\\dfrac{2}{x^3}+\\dots"
+    ]
+   },
+   {
+    "x": "\\sqrt[3]{\\cdots}=x+1-\\dfrac1x+\\dfrac2{x^2}+\\dots"
+   },
+   {
+    "t": "Racine carrée : {1} avec {2}.",
+    "m": [
+     "x(1 + v)^{1/2}",
+     "v = \\dfrac{2}{x} + \\dfrac{3}{x^{2}}"
+    ]
+   },
+   {
+    "t": "{1} {2}",
+    "m": [
+     "(1+v)^{1/2}=1+\\dfrac v2-\\dfrac{v^2}{8}+\\dfrac{v^3}{16}=1+\\dfrac1x+\\dfrac1{x^2}-\\dfrac1{x^3}+\\dots",
+     "\\sqrt{\\cdots}=x+1+\\dfrac1x-\\dfrac1{x^2}+\\dots"
+    ]
+   },
+   {
+    "t": "Différence :",
+    "m": []
+   },
+   {
+    "x": "\\sqrt[3]{\\cdots} - \\sqrt{\\cdots} = - \\dfrac{2}{x} + \\dfrac{3}{x^{2}} + o\\left( \\dfrac{1}{x^{2}} \\right)"
+   },
+   {
+    "t": "On multiplie par {1} : {2}. On ajoute {3} :",
+    "m": [
+     "x^{2}",
+     "- 2x + 3 + o(1)",
+     "2x"
+    ]
+   },
+   {
+    "x": "\\boxed{L_B=3}"
+   }
+  ]
+ },
+ {
+  "id": "PHOENIX-03",
+  "stmt": [
+   {
+    "t": "Calculer : {1}",
+    "m": [
+     "L_{C} = \\lim_{n \\to + \\infty}n^{2}\\left( \\sqrt[n]{2} + \\dfrac{1}{\\sqrt[n]{2}} - 2 \\right)"
+    ]
+   }
+  ],
+  "sol": [
+   {
+    "t": "{1} avec {2}, donc",
+    "m": [
+     "\\sqrt[n]{2} = e^{t}",
+     "t = \\dfrac{\\ln 2}{n} \\to 0"
+    ]
+   },
+   {
+    "x": "\\sqrt[n]{2}+\\dfrac1{\\sqrt[n]{2}}-2=e^t+e^{-t}-2=t^2+\\dfrac{t^4}{12}+\\dots"
+   },
+   {
+    "x": "n^{2} \\cdot \\dfrac{(\\ln 2)^{2}}{n^{2}} \\to (\\ln 2)^{2}"
+   },
+   {
+    "x": "\\boxed{L_C=(\\ln 2)^2}"
+   }
+  ]
+ }
+]

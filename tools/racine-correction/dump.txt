@@ -1,0 +1,401 @@
+#QUICK NOTE; THE DISCLAMERS ON THE HARD MODE (EAGLE) ARE ONLY AVAILABLE IN THIS LESSON. DO NOT TRY INTEGRATING THEM IN OTHER LESSONS#
+sub lesson
+introduction
+Nous connaissons déjà la fonction $x \mapsto x^2$ et sa réciproque, la racine carrée $x \mapsto \sqrt{x}$.
+Mais il existe aussi $x^{3}$, $x^{4}$, et même $x^{1000}$. Quelles sont leurs réciproques ?
+C’est ici qu’interviennent les racines $n$-ièmes :
+    > la réciproque de $x^{3}$ est la racine cubique $\sqrt[3]{x}$ ;
+    > la réciproque de $x^{4}$ est la racine quatrième $\sqrt[4]{x}$ ;
+    > la réciproque de $x^{1000}$ est la racine $1000$-ième $\sqrt[1000]{x}$.
+Ainsi, pour chaque fonction $x \mapsto x^n$ avec $n$ entier strictement positif, il existe une fonction réciproque : la racine $n$-ième, notée $\sqrt[n]{x}$.
+sub lesson
+definition
+I) Définition : Soit n un entier naturel non nul . La fonction f définie sur l'intervalle I = [ 0 ; $+ \infty$ [ par f(x) = $x^{n}$ admet une fonction réciproque $f^{- 1}$ définie sur l'intervalle J = f(I) = [ 0 ; $+ \infty$ [.
+La fonction réciproque de la fonction f(x) = $x^{n}$ s'appelle fonction Racine d'ordre n et on a : $\forall x \ge 0 \quad \forall y \ge 0 \quad ( x^n = y \iff x = \sqrt[n]{y} )$
+sub lesson
+Propriete
+II) Propriété : $\forall x \geq 0;\forall y > 0;\forall n;petqdeN^{*}$
+On a :
+<TABLE> [["", [], []], [null, []], [[{"t": "AlignDefault"}
+Pour tout $a > 0$ ; $b > 0$ et $r;r'deQ$ on a :
+    > $a^{r} \times a^{r'} = a^{r + r'}$
+    > $(a^{r})^{r'} = a^{r \cdot r'}$
+    > $(a \times b)^{r} = a^{r} \times b^{r}$
+    > $\left( \frac{a}{b} \right)^{r} = \frac{a^{r}}{b^{r}}$
+    > $a^{- r} = \frac{1}{a^{r}}$
+    > $\frac{a^{r}}{a^{r'}} = a^{r - r'}$
+Si on pose $r = \frac{p}{q}$ avec $petqdeZ$
+$a^{\frac{p}{q}} = \sqrt[q]{a^{p}}(q \in N^{*})$
+Sub lesson
+Simplification, résolutions d'équations et identités remarquables
+sub sub lesson
+simplification
+## Simplification des racines n-ièmes
+### L’idée clé
+Transforme chaque racine en puissance :
+$\sqrt[n]{a^{m}} = a^{m/n}$
+Puis utilise les règles des puissances que tu connais déjà. Règles à retenir (pour $a,b \geq 0$) :
+    > $\sqrt[n]{a} \times \sqrt[n]{b} = \sqrt[n]{ab}$ et $\dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}=\sqrt[n]{\dfrac ab}$ (même indice obligatoire)
+    > $(\sqrt[n]{a})^{n} = a$
+    > $\sqrt[n]{\sqrt[m]{a}} = \sqrt[{nm}]{a}$
+### 3 étapes
+    > Décomposer le nombre sous la racine : $625 = 5^{4}$, $1024 = 2^{10}$, $16 = 2^{4}$.
+    > Simplifier quand l’exposant est égal à l’indice : $\sqrt[4]{5^{4}} = 5$.
+    > Réduire au même indice pour comparer ou multiplier des racines différentes (on prend un multiple commun).
+application1
+### : Simplifier
+    > $A = \sqrt[3]{54} + \sqrt[3]{16} - \sqrt[3]{128}$
+    > $B = \sqrt[4]{81} \times \sqrt[3]{8} - \sqrt[5]{32}$
+    > $C = \sqrt[3]{2} \times \sqrt[6]{4}$
+    > $D=\dfrac{\sqrt[4]{3^{6}}\times\sqrt{3}}{\sqrt[6]{3^{9}}}$
+correction
+A. $\sqrt[3]{54} = 3\sqrt[3]{2}$, $\sqrt[3]{16} = 2\sqrt[3]{2}$, $\sqrt[3]{128} = 4\sqrt[3]{2}$
+$A = (3 + 2 - 4)\sqrt[3]{2} = \sqrt[3]{2}$
+B. $\sqrt[4]{81} = 3$, $\sqrt[3]{8} = 2$, $\sqrt[5]{32} = 2$
+$B = 3 \times 2 - 2 = 4$
+C. $\sqrt[6]{4} = 2^{2/6} = 2^{1/3}$, donc $C = 2^{1/3} \times 2^{1/3} = 2^{2/3} = \sqrt[3]{4}$
+D. $3^{6/4} = 3^{3/2}$, $\sqrt{3} = 3^{1/2}$, $3^{9/6} = 3^{3/2}$
+$D=\dfrac{3^{3/2}\times3^{1/2}}{3^{3/2}}=3^{1/2}=\mathbf{\sqrt3}$
+application 2
+### Ordonner par ordre croissant
+a) $\sqrt[3]{3}$ ; $\sqrt{2}$ et $\sqrt[6]{10}$
+b) $\sqrt[3]{2}$ ; $\sqrt[4]{5}$ et $\sqrt{3}$
+correction
+a) :indice 6: $\sqrt[3]{3} = \sqrt[6]{9}$, $\sqrt{2} = \sqrt[6]{8}$, $\sqrt[6]{10}$
+Comme $8 < 9 < 10$ : $\sqrt{2} < \sqrt[3]{3} < \sqrt[6]{10}$
+b) :indice 12: $\sqrt[3]{2} = \sqrt[12]{2^{4}} = \sqrt[12]{16}$, $\sqrt[4]{5} = \sqrt[12]{5^{3}} = \sqrt[12]{125}$, $\sqrt{3} = \sqrt[12]{3^{6}} = \sqrt[12]{729}$
+Comme $16 < 125 < 729$ : $\sqrt[3]{2} < \sqrt[4]{5} < \sqrt{3}$
+### sub sub lesson 
+identites remarquables
+### Identités pour les équations
+$a^{3} + b^{3} = (a + b)(a^{2} - ab + b^{2})$
+$a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$
+Le deuxième facteur $(a^{2} \pm ab + b^{2})$ ne s’annule jamais dans $R$ (discriminant négatif), donc seul le premier facteur donne des solutions.
+Sub sub lesson
+Resolution d’equations
+## Comment résoudre une équation avec des racines
+### Méthode en 5 étapes
+    > Condition d’existence. Racine carrée (ou indice pair) : le contenu doit être $\geq 0$. Racine cubique (ou indice impair) : aucune condition.
+    > Isoler la racine d’un côté du signe $=$.
+    > Élever à la puissance $n$ des deux côtés, avec $n$ = l’indice de la racine : $(\sqrt[n]{A})^{n} = A$.
+    > Résoudre l’équation obtenue : factorisation, identités remarquables ou discriminant $\Delta$.
+    > Vérifier chaque solution. C’est obligatoire pour les indices pairs, car l’élévation au carré peut créer de fausses solutions.
+### Cas $x^{n} = a$
+    > $n$ impair : une seule solution, $x = \sqrt[n]{a}$ (quel que soit le signe de $a$).
+    > $n$ pair et $a > 0$ : deux solutions, $x = \pm \sqrt[n]{a}$.
+    > $n$ pair et $a < 0$ : aucune solution.
+### Cas $x^{3} \pm a^{3} = 0$
+On utilise les identités, puis on vérifie que le second facteur a $\Delta < 0$, donc ne donne aucune solution réelle.
+Application1:
+### Résoudre dans $R$
+    > $E_{1}:x^{3} - 64 = 0$
+    > $E_{2}:x^{3} + 125 = 0$
+    > $E_{3}:\sqrt[3]{x^{2} - x + 2} = 2$
+    > $E_{4}:\sqrt{2x + 3} = x$
+    > $E_{5}:x^{4} - 16 = 0$
+    > Correction
+$E_{1}$ : $x^{3} - 4^{3} = (x - 4)(x^{2} + 4x + 16) = 0$. Pour le second facteur, $\Delta = 16 - 64 < 0$, donc pas de solution. $S = \{ 4\}$
+$E_{2}$ : $x^{3} + 5^{3} = (x + 5)(x^{2} - 5x + 25) = 0$. Pour le second facteur, $\Delta = 25 - 100 < 0$. $S = \{ - 5\}$
+$E_{3}$ :
+    > Condition : aucune (indice 3).
+    > On élève au cube : $x^{2} - x + 2 = 8$, donc $x^{2} - x - 6 = 0$.
+    > $\Delta = 1 + 24 = 25$, donc $x=\dfrac{1\pm5}{2}$, soit $x = 3$ ou $x = - 2$.
+    > Vérification : $x = 3$ donne $9 - 3 + 2 = 8$ ✓ et $x = - 2$ donne $4 + 2 + 2 = 8$ ✓.
+$S = \{ - 2,3\}$
+$E_{4}$ :
+    > Condition : $2x + 3 \geq 0$, et $x \geq 0$ puisque la racine est positive.
+    > On élève au carré : $2x + 3 = x^{2}$, donc $x^{2} - 2x - 3 = 0$, donc $(x - 3)(x + 1) = 0$.
+    > $x = 3$ convient : $\sqrt{9} = 3$ ✓.
+    > $x = - 1$ est rejeté car $x \geq 0$ n’est pas respecté : $\sqrt{1} = 1 \neq - 1$.
+$S = \{ 3\}$
+$E_{5}$ : $x^{4} = 16$ avec $n = 4$ pair et $16 > 0$, donc $x = \pm \sqrt[4]{16} = \pm 2$. $S = \{ - 2,2\}$
+SUB LESSON
+Limites avec racines
+### Ce qu’il faut retenir
+Pour une limite avec une racine carrée, on remplace $x$ d’abord. Si on tombe sur une forme indéterminée ($\frac{0}{0}$ ou $\infty - \infty$), on multiplie par la quantité conjuguée.
+Pour une racine cubique, on fait la même chose, mais le conjugué n’est plus $(a + b)$. On utilise l’identité de $a^{3} - b^{3}$ :
+$a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$
+Donc pour une expression $\sqrt[3]{A} - b$ :
+    > on pose $a = \sqrt[3]{A}$ ;
+    > on multiplie en haut et en bas par $a^{2} + ab + b^{2}$, c’est le conjugué cubique ;
+    > le numérateur devient $a^{3} - b^{3} = A - b^{3}$, sans aucune racine.
+<TABLE> [["", [], []], [null, []], [[{"t": "AlignDefault"}
+### Étapes
+    > Remplacer $x$ par la valeur. Si forme indéterminée, passer à l’étape 2.
+    > Multiplier par le conjugué (carré ou cubique).
+    > Simplifier : le facteur qui annule le dénominateur disparaît.
+    > Remplacer à nouveau.
+En $\pm \infty$, on peut aussi factoriser le terme dominant. Attention : $\sqrt[4]{x^{4}} = |x|$ (indice pair), alors que $\sqrt[3]{x^{3}} = x$ (indice impair).
+Exemple:
+$\displaystyle\lim_{x\to0}\frac{\sqrt[3]{x+1}-1}{x}$
+En $x = 0$ : $\frac{1 - 1}{0} = \frac{0}{0}$, forme indéterminée.
+On pose $a = \sqrt[3]{x + 1}$ et $b = 1$. On multiplie par $a^{2} + a + 1$ :
+$\frac{\sqrt[3]{x + 1} - 1}{x} = \frac{(x + 1) - 1}{x\left( \sqrt[3]{(x + 1)^{2}} + \sqrt[3]{x + 1} + 1 \right)} = \frac{1}{\sqrt[3]{(x + 1)^{2}} + \sqrt[3]{x + 1} + 1}$
+$\lim_{x \rightarrow 0} = \frac{1}{1 + 1 + 1} = \frac{1}{3}$
+hors programme mais bon a savoir: pour derivee une fonction a racine n-ieme On écrit la racine en puissance : ⁿ√u = u^(1/n), puis on dérive comme une puissance : (u^a)′ = a · u^(a−1) · u′.
+Exemple : g(x) = ∛(x² + 1) = (x² + 1)^(1/3)
+g′(x) = (1/3)(x² + 1)^(−2/3) · 2x = 2x / (3 · ∛((x² + 1)²))
+Applications:
+    > $\displaystyle\lim_{x\to1}\frac{\sqrt[3]{9x-1}-2}{x-1}$
+    > $\displaystyle\lim_{x\to+\infty}\sqrt[3]{x^3+5x^2+1}-3x$
+    > $\displaystyle\lim_{x\to-\infty}\frac{\sqrt[4]{x^4+1}-2}{x+5}$
+correction
+En $x = 1$ : $\frac{\sqrt[3]{8} - 2}{0} = \frac{0}{0}$.
+On pose $a = \sqrt[3]{9x - 1}$ et $b = 2$. Le conjugué est $a^{2} + 2a + 4$ :
+$$\frac{(9x-1)-8}{(x-1)\left(\sqrt[3]{(9x-1)^2}+2\sqrt[3]{9x-1}+4\right)}=\frac{9(x-1)}{(x-1)(\dots)}=\frac{9}{\sqrt[3]{(9x-1)^2}+2\sqrt[3]{9x-1}+4}$$
+$\lim_{x \rightarrow 1} = \frac{9}{4 + 4 + 4} = \frac{9}{12} = \frac{3}{4}$
+On factorise $x^{3}$ sous la racine (valable car $\sqrt[3]{x^{3}} = x$) :
+$$\sqrt[3]{x^3+5x^2+1}=x\sqrt[3]{1+\frac5x+\frac1{x^3}}\xrightarrow[x\to+\infty]{}x\cdot1$$
+Donc : ⏎ 
+$$\sqrt[3]{x^3+5x^2+1}-3x=x\left(\sqrt[3]{1+\tfrac5x+\tfrac1{x^3}}-3\right)$$
+Le terme entre parenthèses tend vers $1 - 3 = - 2$, et $x \rightarrow + \infty$ :
+$\lim_{} = - \infty$
+Remarque : si l’énoncé est $\sqrt[3]{x^{3} + 5x^{2} + 1} - x$ (probablement l’intention, car c’est là que le conjugué cubique sert), on pose $a = \sqrt[3]{x^{3} + 5x^{2} + 1}$ et $b = x$ :
+$\frac{a^{3} - x^{3}}{a^{2} + ax + x^{2}} = \frac{5x^{2} + 1}{a^{2} + ax + x^{2}}$
+On divise en haut et en bas par $x^{2}$ :
+$= \frac{5 + \frac{1}{x^{2}}}{\left( 1 + \frac{5}{x} + \frac{1}{x^{3}} \right)^{2/3} + \left( 1 + \frac{5}{x} + \frac{1}{x^{3}} \right)^{1/3} + 1} \rightarrow \frac{5}{1 + 1 + 1} = \frac{5}{3}$
+Ici $x \rightarrow - \infty$, donc $x < 0$. Attention à l’indice pair :
+$$\sqrt[4]{x^4+1}=|x|\sqrt[4]{1+\tfrac1{x^4}}=-x\sqrt[4]{1+\tfrac1{x^4}}$$
+On divise numérateur et dénominateur par $x$ :
+$\frac{- x\sqrt[4]{1 + \frac{1}{x^{4}}} - 2}{x + 5} = \frac{- \sqrt[4]{1 + \frac{1}{x^{4}}} - \frac{2}{x}}{1 + \frac{5}{x}} \rightarrow \frac{- 1 - 0}{1 + 0}$
+$\lim_{x \rightarrow - \infty} = - 1$
+EXERCICES
+niveau tres facile Chick
+    > Calculer : $\sqrt[3]{27}$ ; $\sqrt[4]{16}$ ; $\sqrt[5]{32}$ ; $\sqrt[3]{- 8}$
+    > Simplifier : $\sqrt[3]{2} \times \sqrt[3]{4}$
+    > Simplifier : $\dfrac{\sqrt[4]{48}}{\sqrt[4]{3}}$
+    > Simplifier : $\sqrt[3]{24} - \sqrt[3]{3}$
+    > Écrire plus simplement : $\sqrt[6]{8}$
+    > Comparer : $\sqrt{2}$ et $\sqrt[3]{3}$
+    > Comparer : $\sqrt[3]{2}$ et $\sqrt[6]{5}$
+    > Résoudre dans $R$ : $x^{3} - 1 = 0$
+    > Résoudre dans $R$ : $\sqrt[3]{x + 1} = 2$
+    > Calculer : $\displaystyle\lim_{x\to0}\frac{\sqrt[3]{x+8}-2}{x}$
+### Corrections
+1. $\sqrt[3]{27} = 3$ car $3^{3} = 27$ ; $\sqrt[4]{16} = 2$ car $2^{4} = 16$ ; $\sqrt[5]{32} = 2$ car $2^{5} = 32$ ; $\sqrt[3]{- 8} = - 2$ car $( - 2)^{3} = - 8$.
+2. $\sqrt[3]{2} \times \sqrt[3]{4} = \sqrt[3]{8} = 2$
+3. $\dfrac{\sqrt[4]{48}}{\sqrt[4]{3}}=\sqrt[4]{\dfrac{48}{3}}=\sqrt[4]{16}=\mathbf{2}$
+4. $\sqrt[3]{24} = \sqrt[3]{8 \times 3} = 2\sqrt[3]{3}$, donc $2\sqrt[3]{3} - \sqrt[3]{3} = \sqrt[3]{3}$
+5. $\sqrt[6]{8} = \sqrt[6]{2^{3}} = 2^{3/6} = 2^{1/2} = \sqrt{2}$
+6. On met au même indice 6 : $\sqrt{2} = \sqrt[6]{8}$ et $\sqrt[3]{3} = \sqrt[6]{9}$. ⏎ Comme $8 < 9$ : $\sqrt{2} < \sqrt[3]{3}$
+7. Indice 6 : $\sqrt[3]{2} = \sqrt[6]{4}$ et $\sqrt[6]{5}$. ⏎ Comme $4 < 5$ : $\sqrt[3]{2} < \sqrt[6]{5}$
+8. $x^{3} - 1 = (x - 1)(x^{2} + x + 1) = 0$. Le second facteur a $\Delta = 1 - 4 < 0$, donc pas de solution. $S = \{ 1\}$
+9. On élève au cube : $x + 1 = 8$, donc $x = 7$. ⏎ Vérification : $\sqrt[3]{8} = 2$ ✓. $S = \{ 7\}$
+10. En $x = 0$ : $\frac{2 - 2}{0} = \frac{0}{0}$, forme indéterminée. ⏎ 
+On pose $a = \sqrt[3]{x + 8}$ et $b = 2$, puis on multiplie par $a^{2} + 2a + 4$ :
+$\frac{(x + 8) - 8}{x\left( \sqrt[3]{(x + 8)^{2}} + 2\sqrt[3]{x + 8} + 4 \right)} = \frac{1}{\sqrt[3]{(x + 8)^{2}} + 2\sqrt[3]{x + 8} + 4}$
+$\lim_{x \rightarrow 0} = \frac{1}{4 + 4 + 4} = \frac{1}{12}$
+NIVEAU FACILE CHICKEN
+    > $\displaystyle\lim_{x\to0}\frac{\sqrt[3]{x+27}-3}{x}$
+    > $\displaystyle\lim_{x\to1}\frac{\sqrt[3]{x+7}-2}{x-1}$
+    > $\displaystyle\lim_{x\to-1}\frac{\sqrt[3]{x}+1}{x+1}$
+    > $\displaystyle\lim_{x\to+\infty}\frac{\sqrt[3]{8x^3+1}}{x}$
+    > $\displaystyle\lim_{x\to+\infty}\sqrt[3]{x^3+1}-x$
+    > Résoudre dans $R$ : $x^{3} + 27 = 0$
+    > Résoudre dans $R$ : $\sqrt[3]{2x - 1} = 3$
+    > Résoudre dans $R$ : $\sqrt[3]{x^{2} + x + 6} = 2$
+    > Simplifier $a = \sqrt[6]{4}$ et $b = \sqrt[4]{4}$, puis ranger par ordre croissant $a$, $b$ et $c = \sqrt[3]{3}$.
+    > Simplifier $a = \sqrt[4]{36}$, $b = \sqrt[3]{2} \times \sqrt[3]{8}$ et $c = \sqrt[6]{125}$, puis les ranger par ordre croissant.
+### Corrections
+1. En $x = 0$ : $\frac{3 - 3}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{x + 27}$, $b = 3$ et on multiplie par $a^{2} + 3a + 9$ :
+$\frac{(x + 27) - 27}{x\left( \sqrt[3]{(x + 27)^{2}} + 3\sqrt[3]{x + 27} + 9 \right)} = \frac{1}{\sqrt[3]{(x + 27)^{2}} + 3\sqrt[3]{x + 27} + 9}$
+$\lim_{} = \frac{1}{9 + 9 + 9} = \frac{1}{27}$
+2. En $x = 1$ : $\frac{2 - 2}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{x + 7}$, $b = 2$ et on multiplie par $a^{2} + 2a + 4$ :
+$$\frac{(x+7)-8}{(x-1)(\dots)}=\frac{x-1}{(x-1)(\dots)}=\frac{1}{\sqrt[3]{(x+7)^2}+2\sqrt[3]{x+7}+4}$$
+$\lim_{} = \frac{1}{4 + 4 + 4} = \frac{1}{12}$
+3. En $x = - 1$ : $\frac{- 1 + 1}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{x}$. Alors $x + 1 = a^{3} + 1 = (a + 1)(a^{2} - a + 1)$ :
+$\frac{a + 1}{(a + 1)(a^{2} - a + 1)} = \frac{1}{\sqrt[3]{x^{2}} - \sqrt[3]{x} + 1}$
+$\lim_{} = \frac{1}{1 + 1 + 1} = \frac{1}{3}$
+4. On factorise $x^{3}$ sous la racine :
+$$\frac{\sqrt[3]{x^3\left(8+\frac1{x^3}\right)}}{x}=\frac{x\sqrt[3]{8+\frac1{x^3}}}{x}=\sqrt[3]{8+\tfrac1{x^3}}\to\sqrt[3]{8}=\mathbf{2}$$
+5. Forme $\infty - \infty$. On pose $a = \sqrt[3]{x^{3} + 1}$, $b = x$ et on multiplie par $a^{2} + ax + x^{2}$ :
+$\frac{(x^{3} + 1) - x^{3}}{a^{2} + ax + x^{2}} = \frac{1}{\sqrt[3]{(x^{3} + 1)^{2}} + x\sqrt[3]{x^{3} + 1} + x^{2}}$
+Le dénominateur tend vers $+ \infty$, donc $\lim_{} = 0$.
+6. $x^{3} + 27 = (x + 3)(x^{2} - 3x + 9) = 0$. Pour le second facteur, $\Delta = 9 - 36 < 0$, donc pas de solution. $S = \{ - 3\}$
+7. On élève au cube : $2x - 1 = 27$, donc $2x = 28$, donc $x = 14$. ⏎ Vérification : $\sqrt[3]{27} = 3$ ✓. $S = \{ 14\}$
+8. On élève au cube : $x^{2} + x + 6 = 8$, donc $x^{2} + x - 2 = 0$, donc $(x + 2)(x - 1) = 0$. ⏎ Vérification : $x = 1$ donne $1 + 1 + 6 = 8$ ✓ et $x = - 2$ donne $4 - 2 + 6 = 8$ ✓. $S = \{ - 2,1\}$
+9. $a = \sqrt[6]{4} = \sqrt[6]{2^{2}} = 2^{1/3} = \sqrt[3]{2}$ et $b = \sqrt[4]{4} = \sqrt[4]{2^{2}} = \sqrt{2}$. ⏎ On met au même indice 6 : $a = \sqrt[6]{4}$, $b = \sqrt[6]{8}$, $c = \sqrt[6]{9}$. ⏎ Comme $4 < 8 < 9$ : $a < b < c$, soit $\sqrt[3]{2} < \sqrt{2} < \sqrt[3]{3}$.
+10. $a = \sqrt[4]{36} = \sqrt[4]{6^{2}} = \sqrt{6}$ et $b = \sqrt[3]{2 \times 8} = \sqrt[3]{16}$. ⏎ On met au même indice 6 :
+    > $a = \sqrt{6} = \sqrt[6]{6^{3}} = \sqrt[6]{216}$
+    > $b = \sqrt[3]{16} = \sqrt[6]{16^{2}} = \sqrt[6]{256}$
+    > $c = \sqrt[6]{125}$
+Comme $125 < 216 < 256$ : $c < a < b$.
+NIVEAU MOYEN RAVEN
+    > $\displaystyle\lim_{x\to2}\frac{\sqrt[3]{3x+2}-2}{x-2}$
+    > $\displaystyle\lim_{x\to0}\frac{\sqrt[3]{1+2x}-\sqrt[3]{1-x}}{x}$
+    > $\displaystyle\lim_{x\to1}\frac{\sqrt[3]{x+7}-\sqrt[3]{3x+5}}{x-1}$
+    > $\displaystyle\lim_{x\to+\infty}\sqrt[3]{x^3+2x^2}-x$
+    > $\displaystyle\lim_{x\to-\infty}\sqrt[3]{x^3+x^2+1}-x$
+    > $\displaystyle\lim_{x\to+\infty}\sqrt[3]{x^3+x^2}-\sqrt[3]{x^3-x^2}$
+    > $\displaystyle\lim_{x\to0}\frac{\sqrt[3]{1+x}-1}{\sqrt[3]{1+2x}-1}$
+    > $\displaystyle\lim_{x\to-8}\frac{\sqrt[3]{x}+2}{x+8}$
+9Résoudre dans $R$ :
+    > $E_{1}:\sqrt[{\ 3}]{x^{2} + 2x - 1} = \sqrt[3]{2x + 3}$
+    > $E_{2}:\sqrt{\ x + 2} = x$
+    > $E_{3}:\sqrt[{\ 3}]{x^{2}} - 3\sqrt[3]{x} + 2 = 0$ (poser $t = \sqrt[3]{x}$)
+10 Simplifier $A = \sqrt[3]{54} + \sqrt[3]{250} - \sqrt[3]{16}$.
+    > Simplifier $a = \sqrt{3} \times \sqrt[4]{3}$, $b = \sqrt[6]{81}$ et $c = \sqrt[3]{3} \times \sqrt[4]{3}$, puis les ranger par ordre croissant.
+correction
+1. En $x = 2$ : $\frac{2 - 2}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{3x + 2}$, $b = 2$ et on multiplie par $a^{2} + 2a + 4$ :
+$\frac{(3x + 2) - 8}{(x - 2)(a^{2} + 2a + 4)} = \frac{3}{a^{2} + 2a + 4} \rightarrow \frac{3}{12} = \frac{1}{4}$
+2. En $x = 0$ : $\frac{0}{0}$. On pose $a = \sqrt[3]{1 + 2x}$, $b = \sqrt[3]{1 - x}$. On a $a^{3} - b^{3} = 3x$, donc :
+$\frac{3x}{x(a^{2} + ab + b^{2})} = \frac{3}{a^{2} + ab + b^{2}} \rightarrow \frac{3}{1 + 1 + 1} = 1$
+3. En $x = 1$ : $\frac{2 - 2}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{x + 7}$, $b = \sqrt[3]{3x + 5}$. On a $a^{3} - b^{3} = (x + 7) - (3x + 5) = 2 - 2x = - 2(x - 1)$ :
+$\frac{- 2(x - 1)}{(x - 1)(a^{2} + ab + b^{2})} = \frac{- 2}{a^{2} + ab + b^{2}} \rightarrow \frac{- 2}{4 + 4 + 4} = - \frac{1}{6}$
+4. Forme $\infty - \infty$. On pose $a = \sqrt[3]{x^{3} + 2x^{2}}$, $b = x$ :
+$\frac{2x^{2}}{a^{2} + ax + x^{2}}$
+Comme $a = x\left( 1 + \frac{2}{x} \right)^{1/3}$, on divise en haut et en bas par $x^{2}$ :
+$= \frac{2}{\left( 1 + \frac{2}{x} \right)^{2/3} + \left( 1 + \frac{2}{x} \right)^{1/3} + 1} \rightarrow \frac{2}{3}$
+5. On pose $a = \sqrt[3]{x^{3} + x^{2} + 1}$, $b = x$ :
+$$\frac{x^2+1}{a^2+ax+x^2}=\frac{1+\frac1{x^2}}{u^{2/3}+u^{1/3}+1}\quad\text{avec } u=1+\tfrac1x+\tfrac1{x^3}\to1$$
+C’est valable en $- \infty$ car $\sqrt[3]{x^{3}} = x$ (indice impair, pas de valeur absolue).
+$\lim_{} = \frac{1}{3}$
+6. Forme $\infty - \infty$. On pose $a = \sqrt[3]{x^{3} + x^{2}}$, $b = \sqrt[3]{x^{3} - x^{2}}$. On a $a^{3} - b^{3} = 2x^{2}$ :
+$\frac{2x^{2}}{a^{2} + ab + b^{2}}$
+On écrit $a = xu^{1/3}$ et $b = xv^{1/3}$ avec $u = 1 + \frac{1}{x}$ et $v = 1 - \frac{1}{x}$, puis on divise par $x^{2}$ :
+$= \frac{2}{u^{2/3} + (uv)^{1/3} + v^{2/3}} \rightarrow \frac{2}{1 + 1 + 1} = \frac{2}{3}$
+7. En $x = 0$ : $\frac{0}{0}$. On pose $a = \sqrt[3]{1 + x}$ et $c = \sqrt[3]{1 + 2x}$ :
+$a - 1 = \frac{x}{a^{2} + a + 1}c - 1 = \frac{2x}{c^{2} + c + 1}$
+$\frac{a - 1}{c - 1} = \frac{c^{2} + c + 1}{2(a^{2} + a + 1)} \rightarrow \frac{3}{2 \times 3} = \frac{1}{2}$
+8. En $x = - 8$ : $\frac{- 2 + 2}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{x}$, donc $x + 8 = a^{3} + 8 = (a + 2)(a^{2} - 2a + 4)$ :
+$\frac{a + 2}{(a + 2)(a^{2} - 2a + 4)} = \frac{1}{a^{2} - 2a + 4} \rightarrow \frac{1}{4 + 4 + 4} = \frac{1}{12}$
+(avec $a \rightarrow - 2$, donc $a^{2} = 4$ et $- 2a = 4$).
+9)$E_{1}$ : Les deux côtés existent toujours (indice 3). On élève au cube : ⏎ $x^{2} + 2x - 1 = 2x + 3$, donc $x^{2} = 4$. ⏎ $S = \{ - 2,2\}$
+$E_{2}$ :
+    > Conditions : $x + 2 \geq 0$ et $x \geq 0$ (une racine carrée est positive).
+    > On élève au carré : $x + 2 = x^{2}$, donc $x^{2} - x - 2 = 0$, donc $(x - 2)(x + 1) = 0$.
+    > $x = 2$ convient : $\sqrt{4} = 2$ ✓.
+    > $x = - 1$ est rejeté : $\sqrt{1} = 1 \neq - 1$.
+$S = \{ 2\}$
+$E_{3}$ : On pose $t = \sqrt[3]{x}$, donc $\sqrt[3]{x^{2}} = t^{2}$. ⏎ $t^{2} - 3t + 2 = 0$, donc $(t - 1)(t - 2) = 0$, donc $t = 1$ ou $t = 2$. ⏎ Alors $x = t^{3}$ : $x = 1$ ou $x = 8$. ⏎ Vérification : $x = 8$ donne $4 - 6 + 2 = 0$ ✓. ⏎ $S = \{ 1,8\}$
+10)1. $\sqrt[3]{54} = \sqrt[3]{27 \times 2} = 3\sqrt[3]{2}$, $\sqrt[3]{250} = \sqrt[3]{125 \times 2} = 5\sqrt[3]{2}$, $\sqrt[3]{16} = \sqrt[3]{8 \times 2} = 2\sqrt[3]{2}$.
+$A = (3 + 5 - 2)\sqrt[3]{2} = 6\sqrt[3]{2}$
+2. On passe en puissances de $3$ :
+    > $a = 3^{1/2} \times 3^{1/4} = 3^{3/4}$
+    > $b = \sqrt[6]{3^{4}} = 3^{2/3}$
+    > $c = 3^{1/3} \times 3^{1/4} = 3^{7/12}$
+Au même dénominateur $12$ : $a = 3^{9/12}$, $b = 3^{8/12}$, $c = 3^{7/12}$. ⏎ Comme $3 > 1$, la puissance croît avec l’exposant : $7 < 8 < 9$.
+$c < b < a$
+NIveau hard eagle
+Note: Ces questions sont assez complexes, cette lecon n’a pas grand chose a presenter a part l’idee en general, limites equations et simplifications. le niveau raven est suffisant mais si vous voulez ameliorer votre niveau encore plus et que votre amour et curiosite pour les mathematiques vous demangent, Aller-y !
+    > $\displaystyle\lim_{x\to0}\frac{\sqrt[3]{1+x}+\sqrt[3]{1-x}-2}{x^2}$
+    > $\displaystyle\lim_{x\to+\infty}\sqrt[3]{x^3+3x^2}-\sqrt[3]{x^3+x^2}$
+    > $\displaystyle\lim_{x\to1}\frac{\sqrt[3]{x^2}-2\sqrt[3]{x}+1}{(x-1)^2}$
+    > $\displaystyle\lim_{x\to+\infty}x^2\left(\sqrt[3]{x^3+1}-x\right)$
+    > $\displaystyle\lim_{x\to0}\frac{\sqrt[3]{1+3x}-\sqrt[3]{1-3x}}{\sin x}$ quick note: les fonctions trigonometriques ne sont pas au programme, cette question est la pour votre savoir general sur les mathematiques seulement.
+    > Soit $f(x) = \sqrt[3]{x + 7} - \sqrt[3]{x - 1}$. Calculer $\displaystyle\lim_{x\to+\infty}f(x)$, puis résoudre dans $R$ : $f(x) = 2$.
+    > Résoudre dans $R$ : $\sqrt[3]{x^{2}} - \sqrt[3]{x} - 2 = 0$. Puis calculer $\displaystyle\lim_{x\to8}\frac{\sqrt[3]{x^2}-\sqrt[3]{x}-2}{x-8}$.
+    > Soit $h(x) = \sqrt[3]{1 + x} + \sqrt[3]{1 - x}$.
+      > Calculer $\displaystyle\lim_{x\to+\infty}h(x)$.
+      > Résoudre dans $R$ : $h(x) = 1$.
+    > Soit $f(x) = \sqrt[3]{x} + x - 1$.
+      > Calculer $\displaystyle\lim_{x\to-\infty}f(x)$ et $\displaystyle\lim_{x\to+\infty}f(x)$.
+      > Montrer que l’équation $f(x) = 0$ admet une solution unique $\alpha$, puis que $\alpha\in\left]\tfrac18,\tfrac12\right[$.
+    > Problème. Soit $f(x) = \sqrt[3]{x^{3} + 3x^{2}}$.
+      > Montrer que la droite $(D):y = x + 1$ est asymptote à $(C_{f})$ en $+ \infty$ et en $- \infty$.
+      > Résoudre $f(x) = x + 1$, puis étudier la position de $(C_{f})$ par rapport à $(D)$.
+note les deux dernieres questions sont tres difficiles et pas au programme.
+    > A. Pour $a,b\in\mathbb{R}$, on pose $f(x)=\dfrac{\sqrt[3]{x+a}-b}{x-1}$ ($x \neq 1$). Déterminer tous les couples $(a,b)$ tels que $f$ admette en $1$ une limite finie égale à $\dfrac1{12}$. ⏎ B. Pour $m\in\mathbb{R}$, on pose $f_{m}(x) = \sqrt[3]{x^{3} + mx^{2} + 1}$. Montrer que $y=x+\dfrac m3$ est asymptote à $(C_{m})$ en $+ \infty$, puis discuter selon $m$ la position de $(C_{m})$ par rapport à cette asymptote au voisinage de $+ \infty$.
+    > Branche parabolique. Soit $f(x) = x + \sqrt[3]{x^{2}}$.
+      > Étudier la branche infinie de $(C_{f})$ en $+ \infty$ et en $- \infty$.
+      > Étudier la dérivabilité de $f$ en $0$ et interpréter graphiquement.
+      > Montrer que $f$ admet un maximum local, à déterminer.
+correction
+1. En $0$ : $\frac{2 - 2}{0} = \frac{0}{0}$. On pose $a = \sqrt[3]{1 + x}$ et $b = \sqrt[3]{1 - x}$. On écrit ⏎ 
+$a + b - 2 = (a - 1) + (b - 1),a - 1 = \frac{x}{a^{2} + a + 1},b - 1 = \frac{- x}{b^{2} + b + 1}$
+Donc ⏎ 
+$a + b - 2 = x \cdot \frac{(b^{2} + b) - (a^{2} + a)}{(a^{2} + a + 1)(b^{2} + b + 1)} = x \cdot \frac{(b - a)(a + b + 1)}{(a^{2} + a + 1)(b^{2} + b + 1)}$
+Comme $a^{3} - b^{3} = 2x$, on a $b-a=\dfrac{-2x}{a^2+ab+b^2}$. D’où ⏎ 
+$\frac{a + b - 2}{x^{2}} = \frac{- 2(a + b + 1)}{(a^{2} + a + 1)(b^{2} + b + 1)(a^{2} + ab + b^{2})} \rightarrow \frac{- 2 \times 3}{3 \times 3 \times 3} = - \frac{2}{9}$
+2. Forme $\infty - \infty$. On pose $a = \sqrt[3]{x^{3} + 3x^{2}}$ et $b = \sqrt[3]{x^{3} + x^{2}}$. On a $a^{3} - b^{3} = 2x^{2}$. On écrit $a = xu^{1/3}$ et $b = xv^{1/3}$ avec $u = 1 + \frac{3}{x}$ et $v = 1 + \frac{1}{x}$ (valable en $+ \infty$) : ⏎ 
+$a - b = \frac{2x^{2}}{a^{2} + ab + b^{2}} = \frac{2}{u^{2/3} + (uv)^{1/3} + v^{2/3}} \rightarrow \frac{2}{3}$
+3. On pose $t = \sqrt[3]{x}$, donc $t \rightarrow 1$ quand $x \rightarrow 1$. Alors $x - 1 = t^{3} - 1 = (t - 1)(t^{2} + t + 1)$ : ⏎ 
+$\frac{t^{2} - 2t + 1}{(t^{3} - 1)^{2}} = \frac{(t - 1)^{2}}{(t - 1)^{2}(t^{2} + t + 1)^{2}} = \frac{1}{(t^{2} + t + 1)^{2}} \rightarrow \frac{1}{9}$
+4. Forme $\infty \times 0$. On pose $a = \sqrt[3]{x^{3} + 1}$. On a $a^{3} - x^{3} = 1$, donc ⏎ 
+$x^{2}(a - x) = \frac{x^{2}}{a^{2} + ax + x^{2}} = \frac{1}{\left( 1 + \frac{1}{x^{3}} \right)^{2/3} + \left( 1 + \frac{1}{x^{3}} \right)^{1/3} + 1} \rightarrow \frac{1}{3}$
+5. En $0$ : $\frac{0}{0}$. On pose $a = \sqrt[3]{1 + 3x}$ et $b = \sqrt[3]{1 - 3x}$. On a $a^{3} - b^{3} = 6x$ : ⏎ 
+$\frac{a - b}{\sin x} = \frac{6x}{(a^{2} + ab + b^{2})\sin x} = \frac{x}{\sin x} \cdot \frac{6}{a^{2} + ab + b^{2}} \rightarrow 1 \times \frac{6}{3} = 2$
+#### 
+6. On pose $a = \sqrt[3]{x + 7}$ et $b = \sqrt[3]{x - 1}$. On a $a^{3} - b^{3} = 8$.
+Limite : $f(x)=\dfrac{8}{a^2+ab+b^2}$ et le dénominateur tend vers $+ \infty$, donc $\lim_{} = 0$.
+Équation : $a - b = 2$ et $(a - b)(a^{2} + ab + b^{2}) = 8$ donnent $a^{2} + ab + b^{2} = 4$. Comme $a = b + 2$ : ⏎ 
+$(b + 2)^{2} + (b + 2)b + b^{2} = 3b^{2} + 6b + 4 = 4 \Rightarrow \ 3b(b + 2) = 0 \Rightarrow \ b = 0oub = - 2$
+Donc $x - 1 = 0$ ou $x - 1 = - 8$. ⏎ Vérification : $x = 1$ donne $2 - 0 = 2$ ✓ et $x = - 7$ donne $0 - ( - 2) = 2$ ✓. $S = \{ - 7,1\}$
+7. Équation : on pose $t = \sqrt[3]{x}$, donc $t^{2} - t - 2 = (t - 2)(t + 1) = 0$, soit $t = 2$ ou $t = - 1$, donc $x = 8$ ou $x = - 1$. $S = \{ - 1,8\}$
+Limite : avec $t = \sqrt[3]{x} \rightarrow 2$ et $x - 8 = t^{3} - 8 = (t - 2)(t^{2} + 2t + 4)$ : ⏎ 
+$\frac{(t - 2)(t + 1)}{(t - 2)(t^{2} + 2t + 4)} = \frac{t + 1}{t^{2} + 2t + 4} \rightarrow \frac{3}{12} = \frac{1}{4}$
+8. On pose $a = \sqrt[3]{1 + x}$ et $b = \sqrt[3]{1 - x}$.
+Limite : en $+ \infty$, $h(x) = a - \sqrt[3]{x - 1}$. Avec $c = \sqrt[3]{x - 1}$, $a^{3} - c^{3} = 2$, donc $h(x)=\dfrac2{a^2+ac+c^2}\to\mathbf0$.
+Équation : $a + b = 1$ et $a^{3} + b^{3} = 2$. Comme $a^{3} + b^{3} = (a + b)^{3} - 3ab(a + b)$ : ⏎ 
+$2 = 1 - 3ab \Rightarrow \ ab = - \frac{1}{3} \Rightarrow \sqrt[{\ 3}]{1 - x^{2}} = - \frac{1}{3} \Rightarrow \ 1 - x^{2} = - \frac{1}{27}$
+Donc $x^2=\dfrac{28}{27}$. ⏎ Vérification : $s = a + b$ vérifie $s^{3} + s - 2 = 0$ (car $ab = - \frac{1}{3}$), soit $(s - 1)(s^{2} + s + 2) = 0$, donc $s = 1$ ✓. $\mathbf{S=\left\{-\tfrac{2\sqrt{21}}{9},\ \tfrac{2\sqrt{21}}{9}\right\}}$
+9. 1) $\lim_{- \infty}f = - \infty$ et $\lim_{+ \infty}f = + \infty$ (somme de deux fonctions de même limite).
+2) $f$ est continue sur $R$ et strictement croissante (somme de deux fonctions strictement croissantes). Elle réalise donc une bijection de $R$ sur $R$, et $0$ a un unique antécédent $\alpha$. ⏎ On a $f\left( \frac{1}{8} \right) = \frac{1}{2} + \frac{1}{8} - 1 = - \frac{3}{8} < 0$ et $f\left(\frac12\right)=\sqrt[3]{\tfrac12}-\tfrac12>0$ (car $\sqrt[3]{1/2}>\frac12\iff\frac12>\frac18$). Par le TVI : ⏎ 
+$$\mathbf{\alpha\in\left]\tfrac18,\tfrac12\right[}$$
+10. 1) On pose $a = f(x)$ et $b = x + 1$. On a $b^{3} = x^{3} + 3x^{2} + 3x + 1$, donc $a^{3} - b^{3} = - 3x - 1$ : ⏎ 
+$f(x) - (x + 1) = \frac{- 3x - 1}{a^{2} + ab + b^{2}}$
+Comme $a \sim x$ et $b \sim x$ en $\pm \infty$, le dénominateur est équivalent à $3x^{2}$. Donc $f(x)-(x+1)\sim\dfrac{-3x}{3x^2}=-\dfrac1x\to0$ en $\pm \infty$. $(D):y = x + 1$ est asymptote.
+2) $f(x)=x+1\iff a^3=b^3\iff-3x-1=0\iff x=-\frac13$. Vérification : $f\left( - \frac{1}{3} \right) = \sqrt[3]{\frac{8}{27}} = \frac{2}{3} = - \frac{1}{3} + 1$ ✓.
+Position : $a^{2} + ab + b^{2} > 0$ (c’est nul seulement si $a = b = 0$, impossible). Le signe de $f(x) - (x + 1)$ est donc celui de $- 3x - 1$ :
+    > si $x < - \frac{1}{3}$ : $(C_{f})$ est au-dessus de $(D)$ ;
+    > si $x > - \frac{1}{3}$ : $(C_{f})$ est en dessous de $(D)$ ;
+    > en $x = - \frac{1}{3}$ : ils se coupent.
+#### 
+11. A. Pour que la limite soit finie, il faut que le numérateur s’annule en $1$ : $\sqrt[3]{1 + a} = b$, donc $a = b^{3} - 1$. ⏎ Cas $b = 0$ : $a = - 1$ et $f(x)=\dfrac{1}{(x-1)^{2/3}}\to+\infty$, rejeté. ⏎ Cas $b \neq 0$ : on pose $A = \sqrt[3]{x + a}$ : ⏎ 
+$f(x) = \frac{(x + a) - b^{3}}{(x - 1)(A^{2} + Ab + b^{2})} = \frac{x - 1}{(x - 1)(A^{2} + Ab + b^{2})} \rightarrow \frac{1}{3b^{2}}$
+On veut $\dfrac1{3b^2}=\dfrac1{12}$, donc $b^{2} = 4$, donc $b = \pm 2$. ⏎ 
+$(a,b) = (7,2)\ ou\ (a,b) = ( - 9, - 2)$
+Vérification de $( - 9, - 2)$ : $\sqrt[3]{1 - 9} = - 2$ ✓.
+11. B. On pose $a = f_{m}(x)$ et $b = x + \frac{m}{3}$. On a $b^{3} = x^{3} + mx^{2} + \frac{m^{2}}{3}x + \frac{m^{3}}{27}$, donc ⏎ 
+$a^{3} - b^{3} = 1 - \frac{m^{2}}{3}x - \frac{m^{3}}{27}$
+$f_{m}(x) - b = \frac{1 - \frac{m^{2}}{3}x - \frac{m^{3}}{27}}{a^{2} + ab + b^{2}}$
+Le dénominateur est équivalent à $3x^{2}$ et le numérateur est au plus de degré $1$, donc la différence tend vers $0$ : $y = x + \frac{m}{3}$ est asymptote.
+*Discussion en $+ \infty$ :*
+    > si $m \neq 0$ : le numérateur est équivalent à $- \frac{m^{2}}{3}x < 0$, donc $(C_{m})$ est en dessous de l’asymptote ;
+    > si $m = 0$ : le numérateur vaut $1 > 0$, donc $(C_{0})$ est au-dessus de $y = x$.
+12. 1) Pour $x \neq 0$ : ⏎ 
+$\frac{f(x)}{x} = 1 + \frac{1}{\sqrt[3]{x}} \rightarrow 1etf(x) - x = \sqrt[3]{x^{2}} \rightarrow + \infty$
+en $+ \infty$ et en $- \infty$ (car $\sqrt[3]{x^{2}} \geq 0$). Donc $(C_{f})$ admet des **branches paraboliques de direction la droite $y = x$** en $+ \infty$ et en $- \infty$. Il n’y a pas d’asymptote.
+2) $\dfrac{f(x)-f(0)}{x}=1+\dfrac1{\sqrt[3]{x}}$, qui tend vers $+ \infty$ quand $x \rightarrow 0^{+}$ et vers $- \infty$ quand $x \rightarrow 0^{-}$. $f$ n’est pas dérivable en $0$. $(C_{f})$ admet en $O$ deux demi-tangentes verticales (point de rebroussement) : une vers le haut à droite, une vers le haut à gauche, car $f(x) \geq 0$ près de $0$.
+3) Pour $x \neq 0$ : $f'(x)=1+\dfrac{2}{3\sqrt[3]{x}}=\dfrac{3\sqrt[3]{x}+2}{3\sqrt[3]{x}}$. ⏎ $f'(x)=0\iff\sqrt[3]{x}=-\frac23\iff x=-\frac8{27}$.
+    > sur $\left]-\infty,-\frac8{27}\right[$ : $f' > 0$ ;
+    > sur $\left]-\frac8{27},0\right[$ : $f' < 0$ ;
+    > sur $\rbrack 0, + \infty\lbrack$ : $f' > 0$.
+$f$ admet un maximum local en $x = - \frac{8}{27}$ : ⏎ 
+$$f\left(-\tfrac8{27}\right)=-\tfrac8{27}+\sqrt[3]{\tfrac{64}{729}}=-\tfrac8{27}+\tfrac49=\mathbf{\tfrac4{27}}$$
+et un minimum local en $0$, où $f(0) = 0$.
+niveau extreme:
+1 Calculer ⏎ 
+$L_{A} = \lim_{x \rightarrow 0}\frac{\sqrt{1 + 2x} - 2\sqrt[3]{1 + 3x} + \sqrt[4]{1 + 4x}}{x^{3}}$
+2
+$L_{B} = \lim_{x \rightarrow + \infty}\left\lbrack x^{2}\left( \sqrt[3]{x^{3} + 3x^{2} + 1} - \sqrt{x^{2} + 2x + 3} \right) + 2x \right\rbrack$
+3
+$L_{C} = \lim_{n \rightarrow + \infty}n^{2}\left( \sqrt[n]{2} + \frac{1}{\sqrt[n]{2}} - 2 \right)$
+correction
+1 Pour $a \in \{ 2,3,4\}$, on pose $(1 + ax)^{1/a}$ et on développe :
+$$(1+ax)^{1/a}=1+x+\frac{1-a}{2}x^2+\frac{(1-a)(1-2a)}{6}x^3+\dots$$
+<TABLE> [["", [], []], [null, []], [[{"t": "AlignDefault"}
+La combinaison $1 \cdot (a = 2) - 2 \cdot (a = 3) + 1 \cdot (a = 4)$ donne :
+    > constante : $1 - 2 + 1 = 0$
+    > $x$ : $1 - 2 + 1 = 0$
+    > $x^{2}$ : $-\tfrac12+2-\tfrac32=0$
+    > $x^{3}$ : $\tfrac12-\tfrac{10}{3}+\tfrac72=\tfrac23$
+Le numérateur vaut donc $\tfrac23x^3+o(x^3)$, et
+$$\boxed{L_A=\tfrac23}$$
+2 Racine cubique : $x(1 + u)^{1/3}$ avec $u = \frac{3}{x} + \frac{1}{x^{3}}$. ⏎ 
+$(1 + u)^{1/3} = 1 + \frac{u}{3} - \frac{u^{2}}{9} + \frac{5u^{3}}{81}$
+    > $\frac{u}{3} = \frac{1}{x} + \frac{1}{3x^{3}}$
+    > $-\frac{u^2}{9}=-\frac1{x^2}-\dots$
+    > $\frac{5u^3}{81}=\frac{5}{3x^3}+\dots$
+Donc $(1+u)^{1/3}=1+\frac1x-\frac1{x^2}+\frac{2}{x^3}+\dots$ et ⏎ 
+$$\sqrt[3]{\cdots}=x+1-\frac1x+\frac2{x^2}+\dots$$
+Racine carrée : $x(1 + v)^{1/2}$ avec $v = \frac{2}{x} + \frac{3}{x^{2}}$. ⏎ 
+$$(1+v)^{1/2}=1+\frac v2-\frac{v^2}{8}+\frac{v^3}{16}=1+\frac1x+\frac1{x^2}-\frac1{x^3}+\dots$$ $$\sqrt{\cdots}=x+1+\frac1x-\frac1{x^2}+\dots$$
+Différence : ⏎ 
+$\sqrt[3]{\cdots} - \sqrt{\cdots} = - \frac{2}{x} + \frac{3}{x^{2}} + o\left( \frac{1}{x^{2}} \right)$
+On multiplie par $x^{2}$ : $- 2x + 3 + o(1)$. On ajoute $2x$ :
+$$\boxed{L_B=3}$$
+3) $\sqrt[n]{2} = e^{t}$ avec $t = \frac{\ln 2}{n} \rightarrow 0$, donc ⏎ 
+$$\sqrt[n]{2}+\frac1{\sqrt[n]{2}}-2=e^t+e^{-t}-2=t^2+\frac{t^4}{12}+\dots$$
+$n^{2} \cdot \frac{(\ln 2)^{2}}{n^{2}} \rightarrow (\ln 2)^{2}$
+$$\boxed{L_C=(\ln 2)^2}$$

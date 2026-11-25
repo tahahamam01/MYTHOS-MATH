@@ -1,0 +1,3377 @@
+{
+ "version": 1,
+ "note": "Axis convention: x right, y up. Panels of a figure are laid out left→right, wrapping at `ncols`.",
+ "styles": {
+  "cf": {
+   "color": "#2563eb",
+   "width": 2.6,
+   "dash": null,
+   "use": "the curve Cf being studied (and the 'right' example)"
+  },
+  "cf2": {
+   "color": "#ea580c",
+   "width": 2.4,
+   "dash": null,
+   "use": "a second curve (g, or the reciprocal f^-1)"
+  },
+  "ghost": {
+   "color": "#2563eb",
+   "width": 2.0,
+   "dash": [
+    6,
+    4
+   ],
+   "use": "the half of Cf obtained by symmetry (lighter, alpha 0.55)"
+  },
+  "asym": {
+   "color": "#dc2626",
+   "width": 1.6,
+   "dash": [
+    7,
+    5
+   ],
+   "use": "asymptotes (vertical, horizontal, oblique)"
+  },
+  "tangent": {
+   "color": "#16a34a",
+   "width": 1.7,
+   "dash": null,
+   "use": "tangent lines"
+  },
+  "sym": {
+   "color": "#7c3aed",
+   "width": 1.7,
+   "dash": [
+    2,
+    3,
+    8,
+    3
+   ],
+   "use": "symmetry axis / mirror line y=x"
+  },
+  "dir": {
+   "color": "#7c3aed",
+   "width": 1.6,
+   "dash": [
+    7,
+    5
+   ],
+   "use": "direction line of a parabolic branch (y = ax)"
+  },
+  "wrong": {
+   "color": "#dc2626",
+   "width": 2.6,
+   "dash": null,
+   "use": "the WRONG drawing in a do/don't figure (always with a red cross badge)"
+  },
+  "chord": {
+   "color": "#6b7280",
+   "width": 1.4,
+   "dash": [
+    3,
+    3
+   ],
+   "use": "chords, helper segments, distance markers"
+  }
+ },
+ "figures": [
+  {
+   "id": "F01",
+   "section": "2.1",
+   "ncols": 2,
+   "title_fr": "Asymptote verticale : la courbe longe le mur sans jamais le toucher",
+   "alt_fr": "Deux repères. À gauche, la courbe de ln descend le long de la droite pointillée x = 0. À droite, la courbe de 1/x² monte le long de x = 0, des deux côtés.",
+   "panels": [
+    {
+     "id": "F01a",
+     "title": "ln(x) : la courbe descend (−∞) en collant à x = 0",
+     "viewport": [
+      -1.5,
+      7,
+      -5,
+      3
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "log(x)",
+       "domains": [
+        [
+         0.004,
+         7
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        5.6,
+        1.35
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.15,
+        2.5
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        0
+       ],
+       "kind": "filled",
+       "label": "(1 ; 0)",
+       "label_dx": 0.15,
+       "label_dy": -0.5
+      },
+      {
+       "t": "text",
+       "at": [
+        0.45,
+        -4.55
+       ],
+       "text": "$\\lim_{x\\to0^+}\\ln x=-\\infty$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F01b",
+     "title": "1/x² : la courbe monte (+∞) des deux côtés du mur",
+     "viewport": [
+      -4,
+      4,
+      -1,
+      6
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "1/x**2",
+       "domains": [
+        [
+         -4,
+         -0.42
+        ],
+        [
+         0.42,
+         4
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        2.6,
+        0.5
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.12,
+        5.4
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        -3.9,
+        5.2
+       ],
+       "text": "$\\lim_{x\\to0}\\frac{1}{x^2}=+\\infty$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F01_lt.png",
+     "svg": "assets/figures/F01_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F01_dk.png",
+     "svg": "assets/figures/F01_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F02",
+   "section": "2.2",
+   "ncols": 2,
+   "title_fr": "Asymptote horizontale : un sol ou un plafond",
+   "alt_fr": "À gauche, la courbe de 2 + e^(−x) reste au-dessus de la droite y = 2 (sol). À droite, la courbe de 2 − e^(−x) reste en dessous de y = 2 (plafond).",
+   "panels": [
+    {
+     "id": "F02a",
+     "title": "f(x) − 2 > 0 : au-dessus, l'asymptote est un SOL",
+     "viewport": [
+      -2,
+      6.5,
+      -0.5,
+      6
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "2+exp(-x)",
+       "domains": [
+        [
+         -1.2,
+         6.5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        -0.9,
+        4.6
+       ]
+      },
+      {
+       "t": "hline",
+       "y": 2,
+       "style": "asym",
+       "label": "$y=2$ (sol)",
+       "label_at": [
+        4.2,
+        1.55
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        1.6,
+        5.2
+       ],
+       "text": "$f(x)-2=e^{-x}>0$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F02b",
+     "title": "f(x) − 2 < 0 : en dessous, l'asymptote est un PLAFOND",
+     "viewport": [
+      -2,
+      6.5,
+      -2,
+      3.5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "2-exp(-x)",
+       "domains": [
+        [
+         -1.2,
+         6.5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        -1.0,
+        -0.9
+       ]
+      },
+      {
+       "t": "hline",
+       "y": 2,
+       "style": "asym",
+       "label": "$y=2$ (plafond)",
+       "label_at": [
+        3.6,
+        2.2
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        1.6,
+        -1.6
+       ],
+       "text": "$f(x)-2=-e^{-x}<0$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F02_lt.png",
+     "svg": "assets/figures/F02_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F02_dk.png",
+     "svg": "assets/figures/F02_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F03",
+   "section": "2.3",
+   "ncols": 1,
+   "title_fr": "Asymptote oblique : f(x) = x + 1 + 1/x et la droite (D) : y = x + 1",
+   "alt_fr": "La courbe de x + 1 + 1/x a deux branches de part et d'autre de x = 0. Elle longe la droite y = x + 1 : au-dessus pour x > 0, en dessous pour x < 0.",
+   "panels": [
+    {
+     "id": "F03a",
+     "title": "(D) : y = x + 1 est asymptote oblique en ±∞",
+     "viewport": [
+      -6,
+      6,
+      -6,
+      7
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "x+1+1/x",
+       "domains": [
+        [
+         -6,
+         -0.16
+        ],
+        [
+         0.16,
+         6
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        4.1,
+        6.0
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 1,
+       "style": "asym",
+       "label": "(D) : $y=x+1$",
+       "label_at": [
+        -5.8,
+        -5.1
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.15,
+        -5.6
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        1.5,
+        0.6
+       ],
+       "text": "$x>0$ : $C_f$ au-dessus de (D)",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "text",
+       "at": [
+        -5.8,
+        2.6
+       ],
+       "text": "$x<0$ : $C_f$ en dessous de (D)",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F03_lt.png",
+     "svg": "assets/figures/F03_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F03_dk.png",
+     "svg": "assets/figures/F03_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F04",
+   "section": "3",
+   "ncols": 3,
+   "title_fr": "Cas 1 : lim f(x)/x = 0, direction (Ox) — f(x) = √x",
+   "alt_fr": "Trois repères. Gauche (faux) : la courbe retombe et touche l'axe (Ox). Milieu (faux) : la courbe est collée à (Ox) comme une asymptote. Droite (juste) : la courbe √x s'ouvre et s'éloigne de (Ox) en montant lentement.",
+   "panels": [
+    {
+     "id": "F04a",
+     "title": "✗ NON : le U rentre dans (Ox)",
+     "viewport": [
+      -1,
+      16,
+      -1,
+      5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "2.5*(1-x/5)**2",
+       "domains": [
+        [
+         0,
+         5
+        ]
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "point",
+       "at": [
+        5,
+        0
+       ],
+       "kind": "filled",
+       "label": "touche (Ox)",
+       "label_dx": -2.2,
+       "label_dy": 0.55
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    },
+    {
+     "id": "F04b",
+     "title": "✗ NON : le U est collé à (Ox) (fausse asymptote)",
+     "viewport": [
+      -1,
+      16,
+      -1,
+      5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "0.05+0.3*exp(-x/4)",
+       "domains": [
+        [
+         0,
+         16
+        ]
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "text",
+       "at": [
+        2.5,
+        1.6
+       ],
+       "text": "on dirait y = 0 :\nce n'est pas une asymptote",
+       "color": "#b91c1c",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    },
+    {
+     "id": "F04c",
+     "title": "✓ OUI : le U s'ouvre et s'écarte de (Ox)",
+     "viewport": [
+      -1,
+      16,
+      -1,
+      5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "sqrt(x)",
+       "domains": [
+        [
+         0,
+         16
+        ]
+       ],
+       "style": "cf",
+       "label": "$f(x)=\\sqrt{x}$",
+       "label_at": [
+        10.5,
+        2.2
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        1.0,
+        4.3
+       ],
+       "text": "$\\frac{f(x)}{x}=\\frac{1}{\\sqrt{x}}\\to0$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "ok"
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F04_lt.png",
+     "svg": "assets/figures/F04_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F04_dk.png",
+     "svg": "assets/figures/F04_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F05",
+   "section": "3",
+   "ncols": 3,
+   "title_fr": "Cas 2 : lim f(x)/x = ±∞, direction (Oy) — f(x) = x² et eˣ",
+   "alt_fr": "Trois repères. Gauche (faux) : la courbe se rabat vers l'axe (Oy) et le touche. Milieu (faux) : la courbe est collée à (Oy) comme un mur. Droite (juste) : les courbes x² et eˣ montent de plus en plus raide, sans se coller à (Oy).",
+   "panels": [
+    {
+     "id": "F05a",
+     "title": "✗ NON : le U rentre dans (Oy)",
+     "viewport": [
+      -1,
+      4,
+      -1,
+      10
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "xexpr": "2.5*(1-t/9)**2",
+       "yexpr": "t",
+       "t_domain": [
+        0,
+        9
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        9
+       ],
+       "kind": "filled",
+       "label": "touche (Oy)",
+       "label_dx": 0.2,
+       "label_dy": -0.3
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    },
+    {
+     "id": "F05b",
+     "title": "✗ NON : le U est collé à (Oy) (faux mur)",
+     "viewport": [
+      -1,
+      4,
+      -1,
+      10
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "xexpr": "0.1+0.5*exp(-t/4)",
+       "yexpr": "t",
+       "t_domain": [
+        0,
+        10
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "text",
+       "at": [
+        0.8,
+        6.0
+       ],
+       "text": "on dirait x = 0 :\nce n'est pas une\nasymptote verticale",
+       "color": "#b91c1c",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    },
+    {
+     "id": "F05c",
+     "title": "✓ OUI : le U est debout et s'écarte de (Oy)",
+     "viewport": [
+      -1,
+      4,
+      -1,
+      10
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "x**2",
+       "domains": [
+        [
+         0,
+         3.16
+        ]
+       ],
+       "style": "cf",
+       "label": "$x^2$",
+       "label_at": [
+        2.55,
+        4.6
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "exp(x)",
+       "domains": [
+        [
+         0,
+         2.3
+        ]
+       ],
+       "style": "cf2",
+       "label": "$e^x$",
+       "label_at": [
+        1.1,
+        7.2
+       ]
+      },
+      {
+       "t": "badge",
+       "kind": "ok"
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F05_lt.png",
+     "svg": "assets/figures/F05_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F05_dk.png",
+     "svg": "assets/figures/F05_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F06",
+   "section": "3",
+   "ncols": 3,
+   "title_fr": "Cas 3 : lim f(x)/x = a ≠ 0 et lim [f(x) − ax] = ±∞, direction y = ax — f(x) = 2x + √x",
+   "alt_fr": "Trois repères avec la droite y = 2x en pointillés violets. Gauche (faux) : la courbe rejoint la droite. Milieu (faux) : la courbe est collée à la droite comme une asymptote oblique. Droite (juste) : la courbe 2x + √x suit la pente de la droite mais s'en écarte de plus en plus.",
+   "panels": [
+    {
+     "id": "F06a",
+     "title": "✗ NON : le U rentre dans la droite",
+     "viewport": [
+      -1,
+      10,
+      -2,
+      26
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "line",
+       "slope": 2,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=2x$",
+       "label_at": [
+        7.4,
+        12.2
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "2*x+3*(1-x/4)**2",
+       "domains": [
+        [
+         0,
+         4
+        ]
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "point",
+       "at": [
+        4,
+        8
+       ],
+       "kind": "filled",
+       "label": "touche la droite",
+       "label_dx": 0.3,
+       "label_dy": -1.7
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    },
+    {
+     "id": "F06b",
+     "title": "✗ NON : le U est collé à la droite (fausse asymptote)",
+     "viewport": [
+      -1,
+      10,
+      -2,
+      26
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "line",
+       "slope": 2,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=2x$",
+       "label_at": [
+        7.4,
+        12.2
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "2*x+0.4+1.2*exp(-x/2)",
+       "domains": [
+        [
+         0,
+         9.5
+        ]
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "text",
+       "at": [
+        0.2,
+        17.3
+       ],
+       "text": "on dirait une asymptote\noblique : c'est faux",
+       "color": "#b91c1c",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    },
+    {
+     "id": "F06c",
+     "title": "✓ OUI : le U suit la pente mais s'écarte",
+     "viewport": [
+      -1,
+      10,
+      -2,
+      26
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "line",
+       "slope": 2,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=2x$",
+       "label_at": [
+        7.4,
+        12.2
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "2*x+sqrt(x)",
+       "domains": [
+        [
+         0,
+         9.5
+        ]
+       ],
+       "style": "cf",
+       "label": "$f(x)=2x+\\sqrt{x}$",
+       "label_at": [
+        0.2,
+        11.6
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        0.2,
+        17.3
+       ],
+       "text": "$f(x)-2x=\\sqrt{x}\\to+\\infty$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "ok"
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F06_lt.png",
+     "svg": "assets/figures/F06_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F06_dk.png",
+     "svg": "assets/figures/F06_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F07",
+   "section": "4.1",
+   "ncols": 3,
+   "title_fr": "Tracer f(x) = x − ln(x) étape par étape (5 images cumulatives)",
+   "alt_fr": "Cinq images successives : 1) le mur x = 0 et la droite y = x ; 2) le point (1 ; 1) avec sa tangente horizontale et le point (e ; e−1) ; 3) la courbe qui descend de +∞ jusqu'à (1 ; 1) puis remonte ; 4) la fin de branche sous la droite y = x ; 5) la courbe finale convexe.",
+   "note": "Frames are CUMULATIVE: each frame contains everything from the previous one. Frame e is the final figure (reuse it as the thumbnail).",
+   "panels": [
+    {
+     "id": "F07a",
+     "title": "Étape 1 — le cadre : asymptote x = 0 et droite y = x",
+     "viewport": [
+      -0.6,
+      5.2,
+      -0.6,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.08,
+        4.6
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=x$",
+       "label_at": [
+        4.0,
+        4.35
+       ]
+      }
+     ]
+    },
+    {
+     "id": "F07b",
+     "title": "Étape 2 — points exacts et tangente horizontale",
+     "viewport": [
+      -0.6,
+      5.2,
+      -0.6,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.08,
+        4.6
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=x$",
+       "label_at": [
+        4.0,
+        4.35
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.35,
+        1
+       ],
+       "to": [
+        2.2,
+        1
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "text",
+       "at": [
+        2.25,
+        0.82
+       ],
+       "text": "$y=1$",
+       "color": "#15803d",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "(1 ; 1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      },
+      {
+       "t": "point",
+       "at": [
+        2.718,
+        1.718
+       ],
+       "kind": "filled",
+       "label": "(e ; e−1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      }
+     ]
+    },
+    {
+     "id": "F07c",
+     "title": "Étape 3 — suivre les flèches : ↘ puis ↗",
+     "viewport": [
+      -0.6,
+      5.2,
+      -0.6,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.08,
+        4.6
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=x$",
+       "label_at": [
+        4.0,
+        4.35
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.35,
+        1
+       ],
+       "to": [
+        2.2,
+        1
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "curve",
+       "expr": "x-log(x)",
+       "domains": [
+        [
+         0.02,
+         2.2
+        ]
+       ],
+       "style": "cf"
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "min (1 ; 1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      },
+      {
+       "t": "point",
+       "at": [
+        2.718,
+        1.718
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "text",
+       "at": [
+        0.12,
+        2.0
+       ],
+       "text": "↘",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 16
+      },
+      {
+       "t": "text",
+       "at": [
+        1.55,
+        1.75
+       ],
+       "text": "↗",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 16
+      }
+     ]
+    },
+    {
+     "id": "F07d",
+     "title": "Étape 4 — finir à droite, sous la droite y = x",
+     "viewport": [
+      -0.6,
+      5.2,
+      -0.6,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.08,
+        4.6
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=x$",
+       "label_at": [
+        4.0,
+        4.35
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.35,
+        1
+       ],
+       "to": [
+        2.2,
+        1
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "curve",
+       "expr": "x-log(x)",
+       "domains": [
+        [
+         0.02,
+         5.2
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        4.4,
+        2.25
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "point",
+       "at": [
+        2.718,
+        1.718
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "text",
+       "at": [
+        3.3,
+        1.4
+       ],
+       "text": "$f(x)-x=-\\ln x<0$",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F07e",
+     "title": "Étape 5 — concavité : f'' = 1/x² > 0, convexe",
+     "viewport": [
+      -0.6,
+      5.2,
+      -0.6,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.08,
+        4.6
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "dir",
+       "label": "$y=x$",
+       "label_at": [
+        4.0,
+        4.35
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.35,
+        1
+       ],
+       "to": [
+        2.2,
+        1
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "curve",
+       "expr": "x-log(x)",
+       "domains": [
+        [
+         0.02,
+         5.2
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        4.4,
+        2.25
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "(1 ; 1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      },
+      {
+       "t": "point",
+       "at": [
+        2.718,
+        1.718
+       ],
+       "kind": "filled",
+       "label": "(e ; e−1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        1.3,
+        0.2
+       ],
+       "text": "∪ convexe : au-dessus de ses tangentes",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F07_lt.png",
+     "svg": "assets/figures/F07_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F07_dk.png",
+     "svg": "assets/figures/F07_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F08",
+   "section": "4.1",
+   "ncols": 3,
+   "title_fr": "Valeur interdite : ce que la double barre ‖ donne sur la courbe",
+   "alt_fr": "Gauche : 1/x, mur en x = 0, −∞ à gauche et +∞ à droite. Milieu : (x²−1)/(x−1) = x+1, une droite avec un trou (point ouvert) en (1 ; 2). Droite : ln(x²−4), deux blocs séparés par les murs x = −2 et x = 2.",
+   "panels": [
+    {
+     "id": "F08a",
+     "title": "Limite ±∞ : mur — 1/x en 0",
+     "viewport": [
+      -5,
+      5,
+      -6,
+      6
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "1/x",
+       "domains": [
+        [
+         -5,
+         -0.17
+        ],
+        [
+         0.17,
+         5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        2.8,
+        1.2
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.15,
+        -5.5
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        -4.8,
+        -4.6
+       ],
+       "text": "−∞ à gauche",
+       "color": "#b91c1c",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "text",
+       "at": [
+        0.9,
+        4.6
+       ],
+       "text": "+∞ à droite",
+       "color": "#b91c1c",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F08b",
+     "title": "Limite réelle L : pas de mur, un trou ○",
+     "viewport": [
+      -3,
+      4,
+      -2,
+      5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "x+1",
+       "domains": [
+        [
+         -3,
+         4
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        -2.6,
+        -1.2
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        2
+       ],
+       "kind": "open",
+       "label": "○ (1 ; 2) n'appartient pas à $C_f$",
+       "label_dx": -0.8,
+       "label_dy": 0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        -2.9,
+        4.2
+       ],
+       "text": "$f(x)=\\frac{x^2-1}{x-1}$, valeur interdite : 1",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F08c",
+     "title": "Valeur interdite au milieu : deux blocs",
+     "viewport": [
+      -6,
+      6,
+      -5,
+      4
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "log(x**2-4)",
+       "domains": [
+        [
+         -6,
+         -2.0006
+        ],
+        [
+         2.0006,
+         6
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        4.3,
+        2.4
+       ]
+      },
+      {
+       "t": "vline",
+       "x": -2,
+       "style": "asym",
+       "label": "$x=-2$",
+       "label_at": [
+        -1.9,
+        -4.6
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 2,
+       "style": "asym",
+       "label": "$x=2$",
+       "label_at": [
+        2.1,
+        -4.6
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        -5.8,
+        3.3
+       ],
+       "text": "$f(x)=\\ln(x^2-4)$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F08_lt.png",
+     "svg": "assets/figures/F08_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F08_dk.png",
+     "svg": "assets/figures/F08_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F09",
+   "section": "4.1",
+   "ncols": 2,
+   "title_fr": "Ne pas confondre variation et signe",
+   "alt_fr": "Gauche : x − ln x est décroissante sur ]0 ; 1[ mais reste au-dessus de l'axe (Ox). Droite : −1/x est croissante sur ]0 ; +∞[ mais reste sous (Ox).",
+   "panels": [
+    {
+     "id": "F09a",
+     "title": "Décroissante (↘ sur ]0 ; 1[) mais POSITIVE",
+     "viewport": [
+      -0.5,
+      5,
+      -1.5,
+      5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "x-log(x)",
+       "domains": [
+        [
+         0.02,
+         5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        3.9,
+        3.7
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.1,
+        4.5
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "min (1 ; 1) > 0",
+       "label_dx": 0.15,
+       "label_dy": -0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        0.2,
+        2.9
+       ],
+       "text": "↘",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 16
+      },
+      {
+       "t": "text",
+       "at": [
+        1.4,
+        -1.1
+       ],
+       "text": "f décroissante ≠ f négative",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F09b",
+     "title": "Croissante (↗) mais NÉGATIVE : −1/x sur ]0 ; +∞[",
+     "viewport": [
+      -0.5,
+      5,
+      -6,
+      1.5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "-1/x",
+       "domains": [
+        [
+         0.17,
+         5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        3.2,
+        -0.65
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.1,
+        -5.5
+       ]
+      },
+      {
+       "t": "text",
+       "at": [
+        1.0,
+        -3.4
+       ],
+       "text": "↗",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 16
+      },
+      {
+       "t": "text",
+       "at": [
+        1.4,
+        0.8
+       ],
+       "text": "f croissante ≠ f positive",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F09_lt.png",
+     "svg": "assets/figures/F09_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F09_dk.png",
+     "svg": "assets/figures/F09_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F10",
+   "section": "4.2",
+   "ncols": 2,
+   "title_fr": "Convexe ∪ (bol) et concave ∩ (cloche)",
+   "alt_fr": "Gauche : x − ln x, courbe en bol, sous sa corde et au-dessus de sa tangente horizontale y = 1. Droite : ln x, courbe en cloche, au-dessus de sa corde et sous sa tangente y = x − 1.",
+   "panels": [
+    {
+     "id": "F10a",
+     "title": "Convexe ∪ (f″ > 0) : sous la corde, au-dessus des tangentes",
+     "viewport": [
+      -0.3,
+      5,
+      -0.5,
+      4
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "x-log(x)",
+       "domains": [
+        [
+         0.05,
+         4.4
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        3.9,
+        3.2
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.2,
+        1
+       ],
+       "to": [
+        3.6,
+        1
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "text",
+       "at": [
+        3.62,
+        0.88
+       ],
+       "text": "$y=1$",
+       "color": "#15803d",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.5,
+        1.193
+       ],
+       "to": [
+        3.0,
+        1.901
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        0.5,
+        1.193
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "point",
+       "at": [
+        3.0,
+        1.901
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "(1 ; 1)",
+       "label_dx": 0.1,
+       "label_dy": -0.5
+      },
+      {
+       "t": "text",
+       "at": [
+        0.6,
+        3.6
+       ],
+       "text": "corde au-dessus de la courbe",
+       "color": "#4b5563",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "ok"
+      }
+     ]
+    },
+    {
+     "id": "F10b",
+     "title": "Concave ∩ (f″ < 0) : au-dessus de la corde, sous les tangentes",
+     "viewport": [
+      -0.3,
+      6,
+      -3,
+      3
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "log(x)",
+       "domains": [
+        [
+         0.05,
+         6
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        4.6,
+        1.95
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": -1,
+       "style": "tangent",
+       "label": "$y=x-1$",
+       "label_at": [
+        3.7,
+        2.9
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.5,
+        -0.693
+       ],
+       "to": [
+        5.0,
+        1.609
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        0.5,
+        -0.693
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "point",
+       "at": [
+        5.0,
+        1.609
+       ],
+       "kind": "filled"
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        0
+       ],
+       "kind": "filled",
+       "label": "(1 ; 0)",
+       "label_dx": 0.15,
+       "label_dy": -0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        0.5,
+        -2.6
+       ],
+       "text": "corde sous la courbe",
+       "color": "#4b5563",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F10_lt.png",
+     "svg": "assets/figures/F10_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F10_dk.png",
+     "svg": "assets/figures/F10_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F11",
+   "section": "4.2",
+   "ncols": 2,
+   "title_fr": "Point d'inflexion : toujours tracer la tangente — g(x) = x³ − 3x",
+   "alt_fr": "Gauche (juste) : la courbe x³ − 3x traverse sa tangente y = −3x à l'origine : en dessous à gauche (concave), au-dessus à droite (convexe). Droite (faux) : une courbe qui touche la tangente en restant du même côté.",
+   "panels": [
+    {
+     "id": "F11a",
+     "title": "✓ La courbe traverse sa tangente en I(0 ; 0)",
+     "viewport": [
+      -2.4,
+      2.4,
+      -4,
+      4
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "line",
+       "slope": -3,
+       "intercept": 0,
+       "style": "tangent",
+       "label": "$y=-3x$",
+       "label_at": [
+        1.05,
+        -3.8
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "x**3-3*x",
+       "domains": [
+        [
+         -2.1,
+         2.1
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_g$",
+       "label_at": [
+        1.75,
+        1.2
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        0
+       ],
+       "kind": "filled",
+       "label": "I(0 ; 0)",
+       "label_dx": 0.12,
+       "label_dy": 0.35
+      },
+      {
+       "t": "text",
+       "at": [
+        -2.3,
+        -1.6
+       ],
+       "text": "concave ∩ :\nsous la tangente",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "text",
+       "at": [
+        0.9,
+        2.9
+       ],
+       "text": "convexe ∪ :\nau-dessus",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "badge",
+       "kind": "ok"
+      }
+     ]
+    },
+    {
+     "id": "F11b",
+     "title": "✗ NON : la courbe reste du même côté de la tangente",
+     "viewport": [
+      -2.4,
+      2.4,
+      -4,
+      4
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "line",
+       "slope": -3,
+       "intercept": 0,
+       "style": "tangent",
+       "label": "$y=-3x$",
+       "label_at": [
+        1.05,
+        -3.8
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "x**2-3*x",
+       "domains": [
+        [
+         -0.9,
+         2.1
+        ]
+       ],
+       "style": "wrong"
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        0
+       ],
+       "kind": "filled",
+       "label": "ce n'est pas un point d'inflexion",
+       "label_dx": 0.15,
+       "label_dy": 0.55
+      },
+      {
+       "t": "badge",
+       "kind": "no"
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F11_lt.png",
+     "svg": "assets/figures/F11_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F11_dk.png",
+     "svg": "assets/figures/F11_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F12",
+   "section": "4.3",
+   "ncols": 2,
+   "title_fr": "Position relative : droite d'étude et courbe (le 3e exemple, x + 1 + 1/x, est la figure F03)",
+   "alt_fr": "Gauche : x − ln x et la droite y = x se coupent en (1 ; 1) ; au-dessus pour 0 < x < 1, en dessous pour x > 1. Droite : ln x reste toujours sous sa tangente y = x − 1 et ne la touche qu'en x = 1.",
+   "panels": [
+    {
+     "id": "F12a",
+     "title": "f(x) − x = −ln x : signe + puis − (coupe en x = 1)",
+     "viewport": [
+      -0.5,
+      5,
+      -0.5,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "fill",
+       "expr1": "x-log(x)",
+       "expr2": "x",
+       "domain": [
+        0.02,
+        5
+       ],
+       "pos_color": "#2563eb",
+       "neg_color": "#ea580c",
+       "alpha": 0.14
+      },
+      {
+       "t": "curve",
+       "expr": "x-log(x)",
+       "domains": [
+        [
+         0.02,
+         5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        0.35,
+        3.9
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "asym",
+       "label": "$y=x$",
+       "label_at": [
+        4.1,
+        4.55
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.08,
+        4.65
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "(1 ; 1)",
+       "label_dx": 0.15,
+       "label_dy": -0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        0.75,
+        2.2
+       ],
+       "text": "$0<x<1$ :\n$C_f$ au-dessus",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "text",
+       "at": [
+        3.0,
+        1.2
+       ],
+       "text": "$x>1$ :\n$C_f$ en dessous",
+       "color": "#c2410c",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    },
+    {
+     "id": "F12b",
+     "title": "ln(x) − (x − 1) ≤ 0 : toujours sous la tangente",
+     "viewport": [
+      -0.5,
+      5,
+      -2.5,
+      2.5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "log(x)",
+       "domains": [
+        [
+         0.05,
+         5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        3.6,
+        1.8
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": -1,
+       "style": "tangent",
+       "label": "$T:\\ y=x-1$",
+       "label_at": [
+        3.0,
+        2.25
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        0
+       ],
+       "kind": "filled",
+       "label": "(1 ; 0)",
+       "label_dx": 0.15,
+       "label_dy": -0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        0.4,
+        -1.9
+       ],
+       "text": "$C_f$ sous $T$, contact en $x=1$",
+       "color": "#1d4ed8",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F12_lt.png",
+     "svg": "assets/figures/F12_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F12_dk.png",
+     "svg": "assets/figures/F12_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F13",
+   "section": "4.3",
+   "ncols": 1,
+   "title_fr": "Position relative de deux courbes : f(x) = x³ et g(x) = x (exemple ajouté)",
+   "alt_fr": "Les courbes x³ et x se coupent en (−1 ; −1), (0 ; 0) et (1 ; 1). La différence x³ − x est négative, positive, négative, positive sur les quatre intervalles ; Cf est alors en dessous, au-dessus, en dessous, au-dessus de Cg.",
+   "note": "Associated sign table (to render as a lesson table): x | −∞ −1 0 1 +∞ ; f(x)−g(x)=x(x−1)(x+1) | − 0 + 0 − 0 + ; position | Cf sous Cg, Cf sur Cg, Cf sous Cg, Cf sur Cg.",
+   "panels": [
+    {
+     "id": "F13a",
+     "title": "f(x) − g(x) = x(x − 1)(x + 1) : 3 intersections à placer",
+     "viewport": [
+      -2,
+      2,
+      -3,
+      3
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "fill",
+       "expr1": "x**3",
+       "expr2": "x",
+       "domain": [
+        -1.45,
+        1.45
+       ],
+       "pos_color": "#2563eb",
+       "neg_color": "#ea580c",
+       "alpha": 0.14
+      },
+      {
+       "t": "curve",
+       "expr": "x**3",
+       "domains": [
+        [
+         -1.45,
+         1.45
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f : y=x^3$",
+       "label_at": [
+        1.1,
+        2.3
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "x",
+       "domains": [
+        [
+         -2,
+         2
+        ]
+       ],
+       "style": "cf2",
+       "label": "$C_g : y=x$",
+       "label_at": [
+        -1.95,
+        -2.3
+       ]
+      },
+      {
+       "t": "point",
+       "at": [
+        -1,
+        -1
+       ],
+       "kind": "filled",
+       "label": "(−1 ; −1)",
+       "label_dx": -0.55,
+       "label_dy": -0.55
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        0
+       ],
+       "kind": "filled",
+       "label": "(0 ; 0)",
+       "label_dx": 0.12,
+       "label_dy": -0.45
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "(1 ; 1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      },
+      {
+       "t": "text",
+       "at": [
+        -1.95,
+        2.0
+       ],
+       "text": "bleu : $C_f$ au-dessus de $C_g$\norange : $C_f$ en dessous de $C_g$",
+       "color": "#111827",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F13_lt.png",
+     "svg": "assets/figures/F13_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F13_dk.png",
+     "svg": "assets/figures/F13_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F14",
+   "section": "5.1",
+   "ncols": 3,
+   "title_fr": "Parité : tracer une moitié puis compléter (exemples x², x³ − 3x, 1/(x²−1))",
+   "alt_fr": "Gauche : la moitié droite de x² (trait plein) est reflétée dans l'axe (Oy) (pointillés). Milieu : la moitié droite de x³ − 3x est complétée par un demi-tour autour de O ; (1 ; −2) donne (−1 ; 2). Droite : la moitié droite de 1/(x²−1) avec le mur x = 1 est reflétée, donnant aussi le mur x = −1.",
+   "note": "Solid = half drawn from the table of variation. Dashed 'ghost' = half obtained by symmetry. Animate (optional): solid half first, then ghost half appears with the mirror/rotation.",
+   "panels": [
+    {
+     "id": "F14a",
+     "title": "x² (paire) : miroir dans (Oy)",
+     "viewport": [
+      -3.2,
+      3.2,
+      -1,
+      9.5
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "sym",
+       "label": "miroir (Oy)",
+       "label_at": [
+        0.12,
+        8.7
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "x**2",
+       "domains": [
+        [
+         0,
+         3.1
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        2.2,
+        7.4
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "x**2",
+       "domains": [
+        [
+         -3.1,
+         0
+        ]
+       ],
+       "style": "ghost"
+      },
+      {
+       "t": "segment",
+       "from": [
+        -2,
+        4
+       ],
+       "to": [
+        2,
+        4
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        2,
+        4
+       ],
+       "kind": "filled",
+       "label": "(2 ; 4)",
+       "label_dx": 0.12,
+       "label_dy": -0.8
+      },
+      {
+       "t": "point",
+       "at": [
+        -2,
+        4
+       ],
+       "kind": "filled",
+       "label": "(−2 ; 4)",
+       "label_dx": -1.3,
+       "label_dy": -0.8
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        0
+       ],
+       "kind": "filled",
+       "label": "min (0 ; 0)",
+       "label_dx": 0.2,
+       "label_dy": -0.9
+      }
+     ]
+    },
+    {
+     "id": "F14b",
+     "title": "x³ − 3x (impaire) : demi-tour autour de O",
+     "viewport": [
+      -2.6,
+      2.6,
+      -4,
+      4
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "x**3-3*x",
+       "domains": [
+        [
+         0,
+         2.1
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        1.75,
+        1.8
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "x**3-3*x",
+       "domains": [
+        [
+         -2.1,
+         0
+        ]
+       ],
+       "style": "ghost"
+      },
+      {
+       "t": "segment",
+       "from": [
+        -1,
+        2
+       ],
+       "to": [
+        1,
+        -2
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        0
+       ],
+       "kind": "filled",
+       "label": "O",
+       "label_dx": 0.12,
+       "label_dy": 0.25
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        -2
+       ],
+       "kind": "filled",
+       "label": "min (1 ; −2)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      },
+      {
+       "t": "point",
+       "at": [
+        -1,
+        2
+       ],
+       "kind": "filled",
+       "label": "max (−1 ; 2)",
+       "label_dx": -1.0,
+       "label_dy": 0.3
+      },
+      {
+       "t": "point",
+       "at": [
+        1.732,
+        0
+       ],
+       "kind": "filled",
+       "label": "(√3 ; 0)",
+       "label_dx": 0.05,
+       "label_dy": 0.3
+      },
+      {
+       "t": "point",
+       "at": [
+        -1.732,
+        0
+       ],
+       "kind": "filled",
+       "label": "(−√3 ; 0)",
+       "label_dx": -1.0,
+       "label_dy": -0.65
+      }
+     ]
+    },
+    {
+     "id": "F14c",
+     "title": "1/(x²−1) (paire) : le mur x = 1 donne aussi x = −1",
+     "viewport": [
+      -4,
+      4,
+      -4,
+      4
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "sym",
+       "label": "miroir (Oy)",
+       "label_at": [
+        0.1,
+        3.5
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 1,
+       "style": "asym",
+       "label": "$x=1$",
+       "label_at": [
+        1.1,
+        -3.7
+       ]
+      },
+      {
+       "t": "vline",
+       "x": -1,
+       "style": "asym",
+       "label": "$x=-1$",
+       "label_at": [
+        -2.4,
+        -3.7
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "1/(x**2-1)",
+       "domains": [
+        [
+         0,
+         0.86
+        ],
+        [
+         1.14,
+         4
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        2.4,
+        1.2
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "1/(x**2-1)",
+       "domains": [
+        [
+         -4,
+         -1.14
+        ],
+        [
+         -0.86,
+         0
+        ]
+       ],
+       "style": "ghost"
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        -1
+       ],
+       "kind": "filled",
+       "label": "(0 ; −1)",
+       "label_dx": 0.12,
+       "label_dy": -0.55
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F14_lt.png",
+     "svg": "assets/figures/F14_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F14_dk.png",
+     "svg": "assets/figures/F14_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F15",
+   "section": "5.2",
+   "ncols": 1,
+   "title_fr": "Axe de symétrie x = 1 : (x ; y) donne (2·1 − x ; y) — exemple h(x) = (x − 1)²",
+   "alt_fr": "La parabole (x−1)² est symétrique par rapport à la droite verticale x = 1 (violet). Le point (3 ; 4) donne le point (−1 ; 4), à la même distance 2 de l'axe et à la même hauteur.",
+   "panels": [
+    {
+     "id": "F15a",
+     "title": "Axe x = 1 : (3 ; 4) ↔ (−1 ; 4)",
+     "viewport": [
+      -3,
+      5,
+      -1,
+      9
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "vline",
+       "x": 1,
+       "style": "sym",
+       "label": "axe $x=1$",
+       "label_at": [
+        1.12,
+        8.3
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "(x-1)**2",
+       "domains": [
+        [
+         1,
+         4.0
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_h$",
+       "label_at": [
+        3.75,
+        7.4
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "(x-1)**2",
+       "domains": [
+        [
+         -2.0,
+         1
+        ]
+       ],
+       "style": "ghost"
+      },
+      {
+       "t": "segment",
+       "from": [
+        -1,
+        4
+       ],
+       "to": [
+        3,
+        4
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        3,
+        4
+       ],
+       "kind": "filled",
+       "label": "(3 ; 4)",
+       "label_dx": 0.15,
+       "label_dy": -0.7
+      },
+      {
+       "t": "point",
+       "at": [
+        -1,
+        4
+       ],
+       "kind": "filled",
+       "label": "(−1 ; 4)",
+       "label_dx": -1.45,
+       "label_dy": -0.7
+      },
+      {
+       "t": "text",
+       "at": [
+        -0.05,
+        4.35
+       ],
+       "text": "2",
+       "color": "#4b5563",
+       "ha": "center",
+       "size": 10.5
+      },
+      {
+       "t": "text",
+       "at": [
+        2.0,
+        4.35
+       ],
+       "text": "2",
+       "color": "#4b5563",
+       "ha": "center",
+       "size": 10.5
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        0
+       ],
+       "kind": "filled",
+       "label": "(1 ; 0)",
+       "label_dx": 0.12,
+       "label_dy": -0.65
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F15_lt.png",
+     "svg": "assets/figures/F15_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F15_dk.png",
+     "svg": "assets/figures/F15_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F16",
+   "section": "5.2",
+   "ncols": 1,
+   "title_fr": "Centre de symétrie Ω(1 ; 2) : (x ; y) donne (2·1 − x ; 2·2 − y) — exemple k(x) = 2 − ½(x−1) + ½(x−1)³",
+   "alt_fr": "La courbe k est symétrique par rapport au point Ω(1 ; 2). Le point (3 ; 5) donne (−1 ; −1) ; Ω est le milieu du segment qui les relie.",
+   "panels": [
+    {
+     "id": "F16a",
+     "title": "Centre Ω(1 ; 2) : (3 ; 5) ↔ (−1 ; −1)",
+     "viewport": [
+      -3,
+      5,
+      -7,
+      11
+     ],
+     "equal_aspect": false,
+     "elements": [
+      {
+       "t": "curve",
+       "expr": "2-0.5*(x-1)+0.5*(x-1)**3",
+       "domains": [
+        [
+         1,
+         3.6
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_k$",
+       "label_at": [
+        3.2,
+        8.6
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "2-0.5*(x-1)+0.5*(x-1)**3",
+       "domains": [
+        [
+         -1.6,
+         1
+        ]
+       ],
+       "style": "ghost"
+      },
+      {
+       "t": "segment",
+       "from": [
+        -1,
+        -1
+       ],
+       "to": [
+        3,
+        5
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        2
+       ],
+       "kind": "filled",
+       "label": "Ω(1 ; 2)",
+       "label_dx": 0.2,
+       "label_dy": -0.9,
+       "style": "sym"
+      },
+      {
+       "t": "point",
+       "at": [
+        3,
+        5
+       ],
+       "kind": "filled",
+       "label": "(3 ; 5)",
+       "label_dx": 0.2,
+       "label_dy": -1.0
+      },
+      {
+       "t": "point",
+       "at": [
+        -1,
+        -1
+       ],
+       "kind": "filled",
+       "label": "(−1 ; −1)",
+       "label_dx": -1.7,
+       "label_dy": 0.45
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F16_lt.png",
+     "svg": "assets/figures/F16_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F16_dk.png",
+     "svg": "assets/figures/F16_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F17",
+   "section": "5.2",
+   "ncols": 1,
+   "title_fr": "f(x) = 1/x : centre O, les asymptotes x = 0 et y = 0 sont conservées",
+   "alt_fr": "L'hyperbole 1/x : la branche x > 0 en trait plein, la branche x < 0 en pointillés (demi-tour autour de O). Le point (2 ; 0,5) donne (−2 ; −0,5). Les asymptotes sont les axes.",
+   "panels": [
+    {
+     "id": "F17a",
+     "title": "Centre O : (2 ; 0,5) ↔ (−2 ; −0,5)",
+     "viewport": [
+      -5,
+      5,
+      -5,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "hline",
+       "y": 0,
+       "style": "asym",
+       "label": "$y=0$",
+       "label_at": [
+        3.6,
+        0.25
+       ]
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$",
+       "label_at": [
+        0.12,
+        4.4
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "1/x",
+       "domains": [
+        [
+         0.2,
+         5
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        3.0,
+        1.0
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "1/x",
+       "domains": [
+        [
+         -5,
+         -0.2
+        ]
+       ],
+       "style": "ghost"
+      },
+      {
+       "t": "segment",
+       "from": [
+        -2,
+        -0.5
+       ],
+       "to": [
+        2,
+        0.5
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        2,
+        0.5
+       ],
+       "kind": "filled",
+       "label": "(2 ; 0,5)",
+       "label_dx": 0.12,
+       "label_dy": 0.35
+      },
+      {
+       "t": "point",
+       "at": [
+        -2,
+        -0.5
+       ],
+       "kind": "filled",
+       "label": "(−2 ; −0,5)",
+       "label_dx": -1.5,
+       "label_dy": -0.85
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        0
+       ],
+       "kind": "filled",
+       "label": "O",
+       "label_dx": 0.15,
+       "label_dy": 0.25
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F17_lt.png",
+     "svg": "assets/figures/F17_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F17_dk.png",
+     "svg": "assets/figures/F17_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F18",
+   "section": "6",
+   "ncols": 1,
+   "title_fr": "Réciproque : f(x) = eˣ et f⁻¹(x) = ln(x), miroir y = x",
+   "alt_fr": "Les courbes de e^x (bleu) et ln x (orange) sont symétriques par rapport à y = x (violet, repère orthonormé). L'asymptote y = 0 de e^x devient l'asymptote x = 0 de ln x. Les points (0 ; 1) et (1 ; e) donnent (1 ; 0) et (e ; 1). Les tangentes y = e·x et y = x/e passent par l'origine.",
+   "panels": [
+    {
+     "id": "F18a",
+     "title": "(a ; b) ∈ Cf ⇒ (b ; a) ∈ Cf⁻¹ — repère ORTHONORMÉ",
+     "viewport": [
+      -3,
+      5,
+      -3,
+      5
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "sym",
+       "label": "miroir $y=x$",
+       "label_at": [
+        3.2,
+        4.35
+       ]
+      },
+      {
+       "t": "hline",
+       "y": 0,
+       "style": "asym",
+       "label": "$y=0$ (f)",
+       "label_at": [
+        -2.9,
+        -0.45
+       ],
+       "color": "#2563eb"
+      },
+      {
+       "t": "vline",
+       "x": 0,
+       "style": "asym",
+       "label": "$x=0$ (f⁻¹)",
+       "label_at": [
+        0.12,
+        -2.8
+       ],
+       "color": "#ea580c"
+      },
+      {
+       "t": "curve",
+       "expr": "exp(x)",
+       "domains": [
+        [
+         -3,
+         1.6
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f : e^x$",
+       "label_at": [
+        -2.9,
+        0.55
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "log(x)",
+       "domains": [
+        [
+         0.03,
+         5
+        ]
+       ],
+       "style": "cf2",
+       "label": "$C_{f^{-1}} : \\ln x$",
+       "label_at": [
+        3.3,
+        1.85
+       ]
+      },
+      {
+       "t": "line",
+       "slope": 2.7183,
+       "intercept": 0,
+       "style": "tangent"
+      },
+      {
+       "t": "line",
+       "slope": 0.3679,
+       "intercept": 0,
+       "style": "tangent"
+      },
+      {
+       "t": "segment",
+       "from": [
+        0,
+        1
+       ],
+       "to": [
+        1,
+        0
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "segment",
+       "from": [
+        1,
+        2.718
+       ],
+       "to": [
+        2.718,
+        1
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        0,
+        1
+       ],
+       "kind": "filled",
+       "label": "(0 ; 1)",
+       "label_dx": -1.1,
+       "label_dy": 0.15
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        0
+       ],
+       "kind": "filled",
+       "label": "(1 ; 0)",
+       "label_dx": 0.1,
+       "label_dy": -0.5
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        2.718
+       ],
+       "kind": "filled",
+       "label": "(1 ; e)",
+       "label_dx": -1.0,
+       "label_dy": 0.2
+      },
+      {
+       "t": "point",
+       "at": [
+        2.718,
+        1
+       ],
+       "kind": "filled",
+       "label": "(e ; 1)",
+       "label_dx": 0.1,
+       "label_dy": -0.6
+      },
+      {
+       "t": "text",
+       "at": [
+        -2.9,
+        3.3
+       ],
+       "text": "tangentes en (1 ; e) et (e ; 1) :\npente e ↔ pente 1/e",
+       "color": "#15803d",
+       "ha": "left",
+       "size": 10.5
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F18_lt.png",
+     "svg": "assets/figures/F18_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F18_dk.png",
+     "svg": "assets/figures/F18_dk.svg"
+    }
+   }
+  },
+  {
+   "id": "F19",
+   "section": "6",
+   "ncols": 1,
+   "title_fr": "Réciproque : tangente horizontale ↔ tangente verticale — f(x) = (x − 1)³ + 1",
+   "alt_fr": "Les courbes de (x−1)³+1 (bleu) et de sa réciproque ∛(x−1)+1 (orange) sont symétriques par rapport à y = x. En (1 ; 1) la tangente de f est horizontale (y = 1) et celle de f⁻¹ est verticale (x = 1).",
+   "panels": [
+    {
+     "id": "F19a",
+     "title": "Tangente horizontale de f ↔ tangente verticale de f⁻¹",
+     "viewport": [
+      -2,
+      4,
+      -2,
+      4
+     ],
+     "equal_aspect": true,
+     "elements": [
+      {
+       "t": "line",
+       "slope": 1,
+       "intercept": 0,
+       "style": "sym",
+       "label": "miroir $y=x$",
+       "label_at": [
+        2.5,
+        3.2
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "(x-1)**3+1",
+       "domains": [
+        [
+         -0.3,
+         2.45
+        ]
+       ],
+       "style": "cf",
+       "label": "$C_f$",
+       "label_at": [
+        2.0,
+        3.0
+       ]
+      },
+      {
+       "t": "curve",
+       "expr": "cbrt(x-1)+1",
+       "domains": [
+        [
+         -2,
+         4
+        ]
+       ],
+       "style": "cf2",
+       "label": "$C_{f^{-1}}$",
+       "label_at": [
+        3.2,
+        2.25
+       ]
+      },
+      {
+       "t": "segment",
+       "from": [
+        0.1,
+        1
+       ],
+       "to": [
+        1.9,
+        1
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "segment",
+       "from": [
+        1,
+        0.1
+       ],
+       "to": [
+        1,
+        1.9
+       ],
+       "style": "tangent"
+      },
+      {
+       "t": "text",
+       "at": [
+        -1.85,
+        2.7
+       ],
+       "text": "tangente de f :\n$y=1$ (horizontale)",
+       "color": "#15803d",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "text",
+       "at": [
+        1.1,
+        -1.4
+       ],
+       "text": "tangente de f⁻¹ :\n$x=1$ (verticale)",
+       "color": "#15803d",
+       "ha": "left",
+       "size": 10.5
+      },
+      {
+       "t": "segment",
+       "from": [
+        1.5,
+        1.125
+       ],
+       "to": [
+        1.125,
+        1.5
+       ],
+       "style": "chord"
+      },
+      {
+       "t": "point",
+       "at": [
+        1.5,
+        1.125
+       ],
+       "kind": "filled",
+       "label": "(1,5 ; 1,125)",
+       "label_dx": 0.1,
+       "label_dy": -0.5
+      },
+      {
+       "t": "point",
+       "at": [
+        1.125,
+        1.5
+       ],
+       "kind": "filled",
+       "label": "(1,125 ; 1,5)",
+       "label_dx": -1.75,
+       "label_dy": 0.25
+      },
+      {
+       "t": "point",
+       "at": [
+        1,
+        1
+       ],
+       "kind": "filled",
+       "label": "(1 ; 1)",
+       "label_dx": -0.9,
+       "label_dy": -0.55
+      }
+     ]
+    }
+   ],
+   "files": {
+    "light": {
+     "png": "assets/figures/F19_lt.png",
+     "svg": "assets/figures/F19_lt.svg"
+    },
+    "dark": {
+     "png": "assets/figures/F19_dk.png",
+     "svg": "assets/figures/F19_dk.svg"
+    }
+   }
+  }
+ ],
+ "theme": {
+  "note": "Mythos Math site style: transparent background, no grid, serif (Georgia), thick ink axes with open arrowheads. Render each figure twice (light/dark). Hex values in styles are the SOURCE colours; map them with theme.map.",
+  "plate": {
+   "light": "#c6c7c0",
+   "dark": "#151515"
+  },
+  "map": {
+   "ink": [
+    "#111111",
+    "#eeeeee"
+   ],
+   "grey": [
+    "#666666",
+    "#aaaaaa"
+   ],
+   "cf (blue)": [
+    "#0b57d0",
+    "#7db4ff"
+   ],
+   "cf2 (orange/yellow)": [
+    "#c2410c",
+    "#ffc400"
+   ],
+   "asym/wrong (red)": [
+    "#b91c1c",
+    "#ff6b6b"
+   ],
+   "tangent (green)": [
+    "#15803d",
+    "#4ade80"
+   ],
+   "sym/dir (violet)": [
+    "#6d28d9",
+    "#c4a1ff"
+   ]
+  }
+ }
+}
