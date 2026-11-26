@@ -1,0 +1,68 @@
+/* ===== Les nombres complexes (ids cx-) : roomy lessons, colour accents, callouts, figures =====
+   --y is the accent: yellow in the dark theme, red in the light theme (the site already remaps it). */
+
+/* ---- lesson pages ---- */
+.lwbody.cxb{font-size:19.5px;line-height:1.95}
+.lwbody.cxb p{margin:24px 0}
+.lwbody.cxb p.lwhd{margin-top:52px;padding-inline-start:16px;border-inline-start:6px solid var(--y)}
+.lwbody.cxb p>b:first-child{color:var(--y)}
+.lwbody.cxb .lwm{padding:18px 0;margin:34px 0}
+.lwbody.cxb .lwm .katex{font-size:1.4em}
+.lwbody.cxb .lwm.lwbig{margin:40px 0!important;padding:30px 20px!important}
+.lwbody.cxb .lwm.lwbig .katex{font-size:1.6em!important}
+.lwbody.cxb p .katex,.lwa[data-k^="cx-"] p .katex,.lwa[data-k^="ex:cx-"] p .katex{font-size:1.12em}
+.lwbody.cxb p.lwbul{margin:16px 0;padding-inline-start:18px}
+.lwbody.cxb .lwtab{margin:40px 0}
+
+/* ---- callouts (Astuce / Note / Important) ---- */
+.cxq{margin:42px 0;padding:26px 30px;border:2px solid var(--ln);border-inline-start:9px solid var(--y);background:var(--sf)}
+.cxq p{margin:14px 0!important}
+.cxq p:first-child{margin-top:0!important}
+.cxq p:last-child{margin-bottom:0!important}
+.cxq-tip{border-inline-start-color:#FFBA08}
+.cxq-note{border-inline-start-color:#2b7bff}
+.cxq-note p:first-child>b:first-child{color:#2b7bff}
+.cxq-tip p:first-child>b:first-child{color:var(--y)}
+.cxq-imp{border-inline-start-color:#D00000;background:rgba(208,0,0,.07)}
+.cxq-imp p:first-child>b:first-child{color:#D00000}
+[data-theme=dark] .cxq-imp p:first-child>b:first-child{color:#ff5a5a}
+[data-theme=dark] .cxq-note p:first-child>b:first-child{color:#6aa5ff}
+
+/* ---- applications & exercises ---- */
+.lwa[data-k^="cx-"],.lwa[data-k^="ex:cx-"]{font-size:19.5px;line-height:1.95;padding:30px 32px;margin:40px 0}
+.lwa[data-k^="ex:cx-"]{font-size:20px}
+.lwa[data-k^="cx-"]>header,.lwa[data-k^="ex:cx-"]>header{margin-bottom:24px}
+.lwa[data-k^="cx-"] p,.lwa[data-k^="ex:cx-"] p{margin:20px 0}
+.lwa[data-k^="cx-"]>.lwm:empty,.lwa[data-k^="ex:cx-"]>.lwm:empty{display:none}
+.lwa[data-k^="cx-"] .lwm,.lwa[data-k^="ex:cx-"] .lwm{padding:16px 0;margin:26px 0}
+.lwa[data-k^="cx-"] .lwm .katex,.lwa[data-k^="ex:cx-"] .lwm .katex{font-size:1.34em}
+.lwa[data-k^="cx-"] p.lwq1,.lwa[data-k^="ex:cx-"] p.lwq1{margin-top:30px;font-weight:600;font-size:1.04em}
+.lwa[data-k^="cx-"] p.lwq2,.lwa[data-k^="ex:cx-"] p.lwq2{margin:12px 0 12px 26px}
+.lwa[data-k^="cx-"] p.lwhd,.lwa[data-k^="ex:cx-"] p.lwhd{margin-top:46px;padding-inline-start:16px;border-inline-start:6px solid var(--y)}
+.lwa[data-k^="cx-"] .lwc,.lwa[data-k^="ex:cx-"] .lwc{margin-top:48px;padding-top:36px;border-top:3px solid var(--y)}
+.lwa[data-k^="cx-"] .lwc .lws p,.lwa[data-k^="ex:cx-"] .lwc .lws p{margin:22px 0 14px}
+.lwa[data-k^="cx-"] .lwc .lws p>b:first-child,.lwa[data-k^="ex:cx-"] .lwc .lws p>b:first-child{color:var(--y)}
+.lwa[data-k^="cx-"] .lwc .lws .lwm,.lwa[data-k^="ex:cx-"] .lwc .lws .lwm{padding:18px 0;margin:30px 0}
+.lwa[data-k^="cx-"] .lwc .lws p.lwnum,.lwa[data-k^="ex:cx-"] .lwc .lws p.lwnum{margin-top:56px;padding-top:28px}
+.lwa[data-k^="cx-"] .lwc .lws:first-child p.lwnum,.lwa[data-k^="ex:cx-"] .lwc .lws:first-child p.lwnum{margin-top:8px;padding-top:0}
+.lwa[data-k^="cx-"] .cxq,.lwa[data-k^="ex:cx-"] .cxq{margin:34px 0}
+.lwa[data-k^="cx-"] .lwtab,.lwa[data-k^="ex:cx-"] .lwtab{margin:34px 0}
+
+/* ---- figures: light/dark pairs, one visible per theme ---- */
+.coimg:has(img[src*="assets/complexes/"]){background:transparent;border-color:transparent;padding:6px;margin:48px auto 56px;max-width:min(100%,820px)}
+.coimg img[src*="assets/complexes/"]{display:block;margin:0 auto;max-width:100%;height:auto;border-radius:14px;mix-blend-mode:normal!important;filter:none!important;cursor:zoom-in}
+[data-theme=dark] .coimg:has(img[src*="assets/complexes/"][src*="_lt.png"]),[data-theme=light] .coimg:has(img[src*="assets/complexes/"][src*="_dk.png"]){display:none}
+.coimg img[src*="assets/complexes/ensembles"]{max-width:min(100%,540px)}
+.coimg img[src*="assets/complexes/circle_"],.coimg img[src*="assets/complexes/argz_"]{max-width:min(100%,520px)}
+.coimg img[src*="assets/complexes/abc_"]{max-width:min(100%,420px)}
+.coimg img[src*="assets/complexes/line_"]{max-width:min(100%,600px)}
+.coimg img[src*="assets/complexes/plan_"],.coimg img[src*="assets/complexes/points_"]{max-width:min(100%,760px)}
+.coimg img[src*="assets/complexes/pageab_"]{max-width:min(100%,900px)}
+[data-theme=light] .coimg img[src*="assets/complexes/pageab_"],[data-theme=light] .coimg img[src*="assets/complexes/ensembles"]{background:#fff;padding:22px;box-sizing:border-box}
+.lwbody.sub>.coimg:has(img[src*="assets/complexes/"]){max-width:min(100%,820px)!important}
+
+@media(max-width:700px){
+ .lwbody.cxb{font-size:18px;line-height:1.85}
+ .lwa[data-k^="cx-"],.lwa[data-k^="ex:cx-"]{padding:20px 16px;font-size:18px}
+ .cxq{padding:20px 18px}
+}
