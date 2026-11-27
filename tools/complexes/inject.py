@@ -64,4 +64,18 @@ MAP = {'ensembles_de_nombres_cote': 'ensembles', 'plan_complexe_fond_blanc': 'pl
        'circle_diagram_white': 'circle_lt', 'circle_diagram_dark': 'circle_dk', 'complex_plane_ABC_white': 'abc_lt', 'complex_plane_ABC_black': 'abc_dk',
        'complex_plane_argz_white': 'argz_lt', 'complex_plane_argz_black': 'argz_dk', 'pageabtexample1_fr': 'pageab_fr', 'pageabtexample1_en': 'pageab_en', 'pageabtexample1_ar': 'pageab_ar'}
 for a, b in MAP.items(): shutil.copy(os.path.join(assets, a + '.png'), os.path.join(dst, b + '.png'))
+
+# 10) light-theme figures ship with an opaque white background; the page is grey, so turn that white into real transparency
+#     (colour un-mixing: alpha = 1 - min(r,g,b)/255, colour = (pixel - 255*(1-alpha)) / alpha  -> same look as multiply, on any page colour)
+import numpy as np
+from PIL import Image
+for f in sorted(os.listdir(dst)):
+    if not f.endswith('_lt.png'): continue
+    im = np.asarray(Image.open(os.path.join(dst, f)).convert('RGBA')).astype(np.float64)
+    rgb = im[..., :3]; a = 1.0 - rgb.min(axis=2) / 255.0
+    safe = np.maximum(a, 1e-6)[..., None]
+    col = np.clip((rgb - 255.0 * (1.0 - a[..., None])) / safe, 0, 255)
+    col[a < 0.004] = 0
+    out = np.dstack([col, (a * im[..., 3] / 255.0 * 255.0)[..., None]]).round().astype(np.uint8)
+    Image.fromarray(out, 'RGBA').save(os.path.join(dst, f), optimize=True)
 print('injected', len(s), 'figures', len(os.listdir(dst)))

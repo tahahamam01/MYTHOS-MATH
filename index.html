@@ -434,7 +434,8 @@ html[data-theme=light] body.dash-mode .clrbtn:hover,html[data-theme=light] body.
 
 /* ---- figures: light/dark pairs, one visible per theme ---- */
 .coimg:has(img[src*="assets/complexes/"]){background:transparent;border-color:transparent;padding:6px;margin:48px auto 56px;max-width:min(100%,820px)}
-.coimg img[src*="assets/complexes/"]{display:block;margin:0 auto;max-width:100%;height:auto;border-radius:14px;mix-blend-mode:normal!important;filter:none!important;cursor:zoom-in}
+.coimg img[src*="assets/complexes/"]{display:block;margin:0 auto;max-width:100%;height:auto;border-radius:0;mix-blend-mode:normal!important;filter:none!important;cursor:zoom-in}
+[data-theme=light] .coimg img[src*="assets/complexes/pageab_"]{filter:brightness(.8) saturate(1.2)!important}
 [data-theme=dark] .coimg:has(img[src*="assets/complexes/"][src*="_lt.png"]),[data-theme=light] .coimg:has(img[src*="assets/complexes/"][src*="_dk.png"]){display:none}
 .coimg img[src*="assets/complexes/ensembles"]{max-width:min(100%,540px)}
 .coimg img[src*="assets/complexes/circle_"],.coimg img[src*="assets/complexes/argz_"]{max-width:min(100%,520px)}
@@ -442,7 +443,6 @@ html[data-theme=light] body.dash-mode .clrbtn:hover,html[data-theme=light] body.
 .coimg img[src*="assets/complexes/line_"]{max-width:min(100%,600px)}
 .coimg img[src*="assets/complexes/plan_"],.coimg img[src*="assets/complexes/points_"]{max-width:min(100%,760px)}
 .coimg img[src*="assets/complexes/pageab_"]{max-width:min(100%,900px)}
-[data-theme=light] .coimg img[src*="assets/complexes/pageab_"],[data-theme=light] .coimg img[src*="assets/complexes/ensembles"]{background:#fff;padding:22px;box-sizing:border-box}
 .lwbody.sub>.coimg:has(img[src*="assets/complexes/"]){max-width:min(100%,820px)!important}
 
 @media(max-width:700px){
